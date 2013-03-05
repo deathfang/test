@@ -1,0 +1,6 @@
+*   [bootstrap-daterangepicker](https://github.com/dangrossman/bootstrap-daterangepicker)
+*   [impress.js](https://github.com/bartaz/impress.js)
+*   wrapbootstrap login  
+    [Typica Login](http://wrapbootstrap.com/preview/WB0F56883)  
+    [超酷HTML5和CSS3实现的登录及其注册功能表单](http://www.gbin1.com/technology/css/20120406html5css3loginandregistration/)
+*   [yui-gallery-carousel](http://www.wretch.cc/)
