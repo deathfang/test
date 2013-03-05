@@ -1,0 +1,761 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"str",
+				"strong"
+			],
+			[
+				"s",
+				"script"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"box-s",
+				"box-sizing:   (property)"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"p",
+				"padding:   (property)"
+			],
+			[
+				"add",
+				"addClass  (function)"
+			],
+			[
+				"p10",
+				"padding-right	zen:css_properties"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"fun",
+				"function  (keyword)"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"github",
+				"GitHub: Public Gist from Selection"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"java",
+				"Set Syntax: Java Server Page (JSP)"
+			],
+			[
+				"htl",
+				"Set Syntax: HTML"
+			],
+			[
+				"copy",
+				"File: Copy Name"
+			],
+			[
+				"JA",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"mark",
+				"Markdown Preview: preview in Browser"
+			],
+			[
+				"wra",
+				"Bracket Highlighter: Swap Brackets"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"htnl",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"join",
+				"Zen Coding: Split or join tag"
+			],
+			[
+				"co",
+				"File: Copy Path"
+			],
+			[
+				"ti",
+				"Convert Case: Title Case"
+			],
+			[
+				"title",
+				"Convert Case: Title Case"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"PRO",
+				"Project: Save As"
+			],
+			[
+				"pro",
+				"Project: Add Folder"
+			],
+			[
+				"linter",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"lin",
+				"SublimeLinter: Load-Save Linting"
+			],
+			[
+				"dis",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"proje",
+				"Project: Edit"
+			],
+			[
+				"bro",
+				"File: Open In Browser - Testing Server"
+			],
+			[
+				"zen",
+				"Set Syntax: ZenCoding"
+			],
+			[
+				"fet",
+				"Fetch: File"
+			],
+			[
+				"fetc",
+				"Fetch: Package"
+			],
+			[
+				"fetch",
+				"Fetch: File"
+			],
+			[
+				"fe",
+				"Fetch: File"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syntax j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pa",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"snippet",
+				"Snippet: Function"
+			],
+			[
+				"syntax coff",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"crea",
+				"Create Xiki Buffer"
+			],
+			[
+				"cre",
+				"Bracket Highlighter: Fold by Brackets"
+			],
+			[
+				"creat",
+				"Create Xiki Buffer"
+			],
+			[
+				"com",
+				"Toggle Comment"
+			],
+			[
+				"minima",
+				"View: Toggle Minimap"
+			],
+			[
+				"sidebar",
+				"View: Toggle Side Bar"
+			],
+			[
+				"align",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"fo",
+				"Format: Javascript"
+			],
+			[
+				"javs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ol",
+				"Snippet: ol - Placeholder"
+			],
+			[
+				"package list",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"setting",
+				"Preferences: Settings - Default"
+			],
+			[
+				"ali",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"alignment",
+				"Preferences: Alignment File Settings – Default"
+			],
+			[
+				"j",
+				"Set Syntax: JSON"
+			],
+			[
+				"sideba",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"side",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"op",
+				"Gist: Open Gist"
+			],
+			[
+				"gist",
+				"Gist: Create Private Gist"
+			],
+			[
+				"ope",
+				"Gist: Open Gist"
+			],
+			[
+				"m",
+				"Minify Javascript"
+			],
+			[
+				"for",
+				"Format: Javascript"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			],
+			[
+				"jq",
+				"Snippet: jQuery live handler"
+			],
+			[
+				"sycss",
+				"Set Syntax: CSS"
+			],
+			[
+				"syjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 160.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/project/impress.js_test/index.html",
+		"/E/project/impress.js_test/css/impress-demo.css",
+		"/E/project/impress.js-master/css/impress-demo.css",
+		"/E/project/impress.js-master/jsper.html",
+		"/E/project/impress.js-master/index.html",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/sublime-github/GitHub.sublime-settings",
+		"/D/Resource/Professional JavaScript for Web Developers, 3rd Edition/Ch22/ThrottlingExample.htm",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/E/project/gc/GG_CSS/prettify.css",
+		"/E/project/gc/GG_CSS/jsper.html",
+		"/D/Resource/CSS/CSS3/effect/textShadow_Gradient.htm",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/js/common/jquery_marquee.js",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/js/common/jquery.magnify-1.0.2.js",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/GBK Encoding Support/tmp/jquery.js                E%3A%5CWorkspaces%5CMyEclipse+8.6%5CGuangCaiPrj%5CWebRoot%5Cjs%5Ccommon%5Cjquery.js",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/css/proxy.css",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/template/cpframe/agency-top.ftl",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/template/cpframe/order-top.ftl",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/GBK Encoding Support/tmp/jquery.treeview.js                E%3A%5CWorkspaces%5CMyEclipse+8.6%5CGuangCaiPrj%5CWebRoot%5Cjs%5Ccommon%5Cjquery.treeview.js",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/GBK Encoding Support/tmp/jquery.min.js                E%3A%5CWorkspaces%5CMyEclipse+8.6%5CGuangCaiPrj%5CWebRoot%5Cjs%5Ccommon%5Cjquery.min.js",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/js/common/check-login.js",
+		"/D/Resource/Javascript/tools/jquery.marquee.js",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/template/cpframe/top.ftl",
+		"/D/Resource/Professional JavaScript for Web Developers, 3rd Edition/Ch22/RepeatingTimersExample.htm",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/js/common/lazyload-min.js",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/pages/jsp/agency/game_rule.jsp",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/GBK Encoding Support/tmp/EN.txt                D%3A%5CResource%5Cdocument%5CEN.txt",
+		"/D/Resource/document/EN.txt",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/pages/jsp/backstage/shoufu/header.jsp",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/pages/jsp/default/header.jsp",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/TortoiseSVN/package-metadata.json",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/TortoiseSVN/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/TortoiseSVN/packages.json",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/GBK Encoding Support/tmp/test.html                E%3A%5CWorkspaces%5CMyEclipse+8.6%5CGuangCaiPrj%5CWebRoot%5Ctest.html",
+		"/C/Users/Administrator/AppData/Local/Google/Chrome/User Data/Default/User StyleSheets/Custom.css",
+		"/C/Users/Administrator/AppData/Local/Google/Chrome/User Data/Default/Extensions/mlejngncgiocofkcbnnpaieapabmanfl/1.2.1_0/devtools.html",
+		"/C/Users/Administrator/AppData/Local/Google/Chrome/User Data/Default/Extensions/mlejngncgiocofkcbnnpaieapabmanfl/1.2.1_0/devtools.js",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/GBK Encoding Support/tmp/ch07.txt                D%3A%5CResource%5CUnearthing+the+Excellence+in+JavaScript%5Cch07.txt",
+		"/D/Resource/Unearthing the Excellence in JavaScript/ch08.txt",
+		"/D/Resource/Unearthing the Excellence in JavaScript/ch06.txt",
+		"/D/Resource/Unearthing the Excellence in JavaScript/ch07.txt",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/js/admin/index.js",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/js/backstage/caipan/ma.js",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/js/backstage/caipan/caipan.js",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/js/admin/member/updateAdmin.js",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/js/order/memberUtils.js",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/pages/jsp/common/import.jsp",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/pages/jsp/common/taglib.jsp",
+		"/E/Workspaces/MyEclipse 8.6/GuangCaiPrj/WebRoot/html/ABCpancha.html",
+		"/E/project/gc/gc.sublime-project",
+		"/E/project/gc/gc.sublime-workspace"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"imagination",
+			"ing",
+			"tiny",
+			"text-align:center",
+			"firsr_title",
+			"wanna",
+			"疯了",
+			"border-bottom",
+			":hover",
+			"art",
+			"肉体",
+			".length",
+			"for(",
+			"for",
+			"just",
+			"短暂",
+			"消逝",
+			"h1",
+			"project",
+			"ctrl+j",
+			"ctrl+k",
+			".a",
+			"la",
+			"\n",
+			"la",
+			"class",
+			".t",
+			"emmet",
+			"ctrl+up",
+			"insert",
+			"createMarquee",
+			"padding",
+			"$marquee",
+			"paddin",
+			"padding",
+			"$(\".ball_total table\").css({width:($(\".ball_col\").outerWidth())*5",
+			"$(\".ball_total table\").css({width:($(\".ball_col\").outerWidth())*5 + ($(\".ball_box .gap\")",
+			"resizeLayout",
+			"re",
+			"$(\".ball_total table\").css({width:($(\".ball_col\").outerWidth())*5",
+			"tableTabs",
+			"$(\".ball_total table\").css({width:($(\".ball_col\").outerWidth())*5",
+			"tabPagesCallBack",
+			"ctrl+alt+p",
+			"ctrl+enter",
+			"ctrl+alt+r",
+			"ctrl+alt+enter",
+			"ctrl+enter",
+			"super",
+			"background",
+			"ctrl",
+			"Ctrl",
+			"ctrl",
+			"Ctrl",
+			"ctrl",
+			"ctrl+k",
+			"ctrl+l",
+			"div",
+			"ddsa",
+			"div",
+			"folder_exclude_patterns",
+			"ctrl+space",
+			"insert_best_completion",
+			"tab",
+			"ctrl+k",
+			"name",
+			"var",
+			" \"\"",
+			"ctrl+d",
+			"\"",
+			" \"",
+			"   \"",
+			"daasd",
+			"\"",
+			"tab",
+			"snippet",
+			"tab",
+			"snippet",
+			"ctrl+up",
+			"tab",
+			"extensions",
+			"pubDate",
+			"wrap",
+			"pubDate",
+			"ctrl+alt",
+			"ctrl_alt",
+			"ctrl+alt",
+			"copy file",
+			"copy",
+			"ctrl+alt+c",
+			"ctrl+alt",
+			"ctrl+alt+c",
+			"ctrl+k",
+			"ctrl+shift+a",
+			"ctrl+shift",
+			"data",
+			"ctrl+shift+l",
+			"data",
+			"ctrl+alt+m",
+			"ctrl+alt+M",
+			"ctrl+alt+m",
+			"minifi",
+			"div",
+			">\n",
+			"c",
+			"class",
+			"ctrl+shift",
+			"textarea"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+			"h2",
+			"},\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.unsaved_changes":
+	{
+		"height": 130.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"css",
+				"css/impress-demo.css"
+			],
+			[
+				"pro",
+				"css/proxy.css"
+			],
+			[
+				".fl",
+				"template/cpframe/order-top.ftl"
+			],
+			[
+				"ord",
+				"template/cpframe/order-top.ftl"
+			],
+			[
+				"che",
+				"js/common/check-login.js"
+			],
+			[
+				"age",
+				"template/cpframe/agency-top.ftl"
+			],
+			[
+				".ftl",
+				"template/cpframe/agency-top.ftl"
+			],
+			[
+				"gamer",
+				"pages/jsp/agency/game_rule.jsp"
+			],
+			[
+				"laz",
+				"js/common/lazyload-min.js"
+			],
+			[
+				"check",
+				"js/common/check-login.js"
+			],
+			[
+				"header",
+				"pages/jsp/backstage/shoufu/header.jsp"
+			],
+			[
+				"head",
+				"pages/jsp/default/header.jsp"
+			],
+			[
+				"game",
+				"pages/jsp/agency/game_rule.jsp"
+			],
+			[
+				"vip",
+				"gc/GG_CSS/vip.css"
+			],
+			[
+				"home_se",
+				"gc/lotto_manage_new/html/home_seagreen.html"
+			],
+			[
+				"home_de",
+				"gc/lotto_manage_new/html/home_default.html"
+			],
+			[
+				"v_de",
+				"gc/GG_CSS/v_default.js"
+			],
+			[
+				"memberu",
+				"GuangCaiPrj/WebRoot/js/order/memberUtils.js"
+			],
+			[
+				"member",
+				"gc/lotto_manage_new/js/member_index.js"
+			],
+			[
+				"me",
+				"gc/lotto_manage_new/js/member_index.js"
+			],
+			[
+				"v_def",
+				"GuangCaiPrj/WebRoot/css/v_default.js"
+			],
+			[
+				"v",
+				"GG_CSS/vip.css"
+			],
+			[
+				"prox",
+				"GuangCaiPrj/WebRoot/css/proxy.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/E/project/gc/gc.sublime-project"
+			],
+			[
+				"gc",
+				"/E/project/gc/gc.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 182.0,
+	"status_bar_visible": true
+}
