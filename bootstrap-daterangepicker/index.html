@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+   <head>
+      <meta charset="UTF-8" />
+      <title>A date range picker for Twitter Bootstrap</title>
+      <link rel="stylesheet" type="text/css" media="all" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" />
+      <link rel="stylesheet" type="text/css" media="all" href="daterangepicker.css" />
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+      <script type="text/javascript" src="date.js"></script>
+      <script type="text/javascript" src="daterangepicker.js"></script>
+   </head>
+   <body>
+
+      <div class="container">
+         <div class="span12">
+
+            <h4>Simple Example</h4>
+            <div class="well">
+
+               <form class="form-horizontal">
+                 <fieldset>
+                  <div class="control-group">
+                    <label class="control-label" for="reservation">Reservation dates:</label>
+                    <div class="controls">
+                     <div class="input-prepend">
+                       <span class="add-on"><i class="icon-calendar"></i></span><input type="text" name="reservation" id="reservation" value="03/18/2013 - 03/23/2013" />
+                     </div>
+                    </div>
+                  </div>
+                 </fieldset>
+               </form>
+
+               <script type="text/javascript">
+               $(document).ready(function() {
+                  $('#reservation').daterangepicker();
+               });
+               </script>
+
+            </div>
+
+            <h4>Options Usage Example</h4>
+
+            <div class="well">
+
+               <div id="reportrange" class="pull-left" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                  <i class="icon-calendar icon-large"></i>
+                  <span></span> <b class="caret" style="margin-top: 8px"></b>
+               </div>
+
+               <script type="text/javascript">
+               $(document).ready(function() {
+                  $('#reportrange').daterangepicker(
+                     {
+                        ranges: {
+                           '今天': ['today', 'today'],
+                           '昨天': ['yesterday', 'yesterday'],
+                           '7天前': [Date.today().add({ days: -6 }), 'today'],
+                           '最近30天': [Date.today().add({ days: -29 }), 'today'],
+                           '本月': [Date.today().moveToFirstDayOfMonth(), Date.today().moveToLastDayOfMonth()],
+                           '上个月': [Date.today().moveToFirstDayOfMonth().add({ months: -1 }), Date.today().moveToFirstDayOfMonth().add({ days: -1 })]
+                        },
+                        opens: 'right',
+                        format: 'yyyy/MM/dd',
+                        separator: ' to ',
+                        startDate: Date.today().add({ days: -29 }),
+                        endDate: Date.today(),
+                        minDate: '2012/01/01',
+                        maxDate: '2013/12/31',
+                        showDropdowns: true,
+                        locale: {
+                            applyLabel: '提交',
+                            clearLabel:'重置',
+                            fromLabel: '开始',
+                            toLabel: '结束',
+                            customRangeLabel: '自定义日期',
+                            daysOfWeek: ['日', '一', '二', '三', '四', '五','六'],
+                            monthNames: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                            firstDay: 1
+                        },
+                        showWeekNumbers: true,
+                        buttonClasses: ['btn-danger'],
+                        dateLimit: false
+                     }, 
+                     function(start, end) {
+                        $('#reportrange span').html(start.toString('MMMM d, yyyy') + ' - ' + end.toString('MMMM d, yyyy'));
+                     }
+                  );
+
+                  //Set the initial state of the picker label
+                  $('#reportrange span').html(Date.today().add({ days: -29 }).toString('yyyy-M-d') + ' - ' + Date.today().toString('yyyy-M-d'));
+
+               });
+               </script>
+
+            </div>
+			
+            <h4>Month/Year Dropdowns</h4>
+
+            <div class="well">
+
+               <form class="form-horizontal">
+                 <fieldset>
+                  <div class="control-group">
+                    <label class="control-label" for="reservation">Date range:</label>
+                    <div class="controls">
+                     <div class="input-prepend">
+                       <span class="add-on"><i class="icon-calendar"></i></span><input type="text" name="reservation" id="daterange" />
+                     </div>
+                    </div>
+                  </div>
+                 </fieldset>
+               </form>
+
+
+               <script type="text/javascript">
+               $(document).ready(function() {
+                  $('#daterange').daterangepicker(
+                     {
+                        minDate: '01/01/2010',
+                        maxDate: '12/31/2015',
+						            showDropdowns: true
+                     }
+                  );
+
+               });
+               </script>
+
+            </div>
+
+            <h4>Range Limit Example</h4>
+            <div class="well">
+
+               <form class="form-horizontal">
+                 <fieldset>
+                  <div class="control-group">
+                    <label class="control-label" for="reservation">Reservation dates:</label>
+                    <div class="controls">
+                     <div class="input-prepend">
+                       <span class="add-on"><i class="icon-calendar"></i></span><input type="text" name="reservation" id="limited" value="03/18/2013 - 03/21/2013" />
+                     </div>
+                    </div>
+                  </div>
+                 </fieldset>
+               </form>
+
+               <script type="text/javascript">
+               $(document).ready(function() {
+                  $('#limited').daterangepicker(
+                    {
+                      dateLimit: { days: 3 }
+                    });
+               });
+               </script>
+
+            </div>
+
+
+         </div>
+      </div>
+
+   </body>
+</html>
