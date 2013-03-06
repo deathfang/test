@@ -1,3 +1,6 @@
+#reportrange{
+  background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;border-radius:4px
+}
 .daterangepicker.dropdown-menu {
   max-width: none;
 }
