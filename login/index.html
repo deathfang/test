@@ -82,7 +82,7 @@
                     </p>
                     <p class="control-group"> 
                         <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-                        <i class="icon-briefcase"></i><input id="passwordsignup_confirm" name="passwordsignup_confirm" type="password" placeholder="eg. X8df!90EO" data-validation-match-match="passwordsignup" data-validation-match-message="√‹¬Î≤ª∆•≈‰">
+                        <i class="icon-briefcase"></i><input id="passwordsignup_confirm" name="passwordsignup_confirm" type="password" placeholder="eg. X8df!90EO" required data-validation-required-message="«ÎÃÓ–¥√‹¬Î£°" data-validation-match-match="passwordsignup" data-validation-match-message="√‹¬Î≤ª∆•≈‰">
                         <span class="help-block"></span>
                     </p>
                     <p class="signin button"> 
@@ -109,6 +109,9 @@
     $(".logo").tooltip();
     $("input,select,textarea").not("[type=submit]").not("[name=passwordsignup_confirm]").jqBootstrapValidation()
     $("[name=passwordsignup_confirm]").jqBootstrapValidation({validationHandlers:["blur"]})
+    $("#register").submit(function(){
+        $("[name=passwordsignup_confirm]").val() == "" &&  $("[name=passwordsignup_confirm]").parent(".control-group").addClass("error").find(".help-block").html('<ul role="alert"><li>«Î÷ÿ∏¥ÃÓ–¥√‹¬Î</li></ul>')
+    })
 </script>
 
 
