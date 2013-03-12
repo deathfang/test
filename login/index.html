@@ -2,11 +2,7 @@
 
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
 		<title>Login and Registration Form with HTML5 and CSS3 Demo</title>
-		
-		
-
-		
-        <meta charset="UTF-8">
+       <meta charset="UTF-8">
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -19,6 +15,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.min.js"></script>
         <script src="jquery.backstretch.min.js"></script>     
+        <script src="jqBootstrapValidation.js"></script>     
 </head>
 <body>
 
@@ -29,15 +26,17 @@
         <div id="wrapper">
             <a class="logo" data-toggle="tooltip" data-placement="right" title="顫抖吧！人類……" href="/"><img src="logo.png" alt=""></a>
             <div id="login" class="animate form">
-                <form action="http://www.gbin1.com/technology/css/20120406html5css3loginandregistration/mysuperscript.php" autocomplete="on"> 
+                <form action="" autocomplete="on" novalidate> 
                     <h1>Login</h1> 
-                    <p> 
+                    <p class="control-group"> 
                         <label for="username" class="uname" data-icon="u"> Your email or username </label>
-                        <i class="icon-user"></i><input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com">
+                        <i class="icon-user"></i><input id="username" name="username" required type="text" placeholder="myusername or mymail@mail.com" data-validation-required-message="请填写用户名！">
+                        <span class="help-block"></span>
                     </p>
-                    <p> 
+                    <p class="control-group"> 
                         <label for="password" class="youpasswd" data-icon="p"> Your password </label>
-                        <i class="icon-briefcase"></i><input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO"> 
+                        <i class="icon-briefcase"></i><input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" data-validation-required-message="请填写密码！">
+                        <span class="help-block"></span> 
                     </p>
                     <p class="keeplogin checkbox"> 
     					<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping"> 
@@ -54,23 +53,37 @@
             </div>
 
             <div id="register" class="animate form">
-                <form action="http://www.gbin1.com/technology/css/20120406html5css3loginandregistration/mysuperscript.php" autocomplete="on"> 
+                <form action="" autocomplete="on" novalidate> 
                     <h1>Sign Up</h1> 
-                    <p> 
+                    <p class="control-group"> 
                         <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-                        <i class="icon-briefcase"></i><input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690">
+                        <i class="icon-briefcase"></i><input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" data-validation-required-message="请填写用户名！">
+                        <span class="help-block"></span>
                     </p>
-                    <p> 
+                    <p class="control-group"> 
                         <label for="emailsignup" class="youmail" data-icon="e"> Your email</label>
-                        <i class="icon-envelope"></i><input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"> 
+                        <i class="icon-envelope"></i><input id="emailsignup" name="emailsignup" type="email" placeholder="mysupermail@mail.com" data-validation-email-message="这不是Email" data-validation-required-message="请填写Email！"> 
+                        <span class="help-block"></span>
                     </p>
-                    <p> 
+                    <script>
+                        var regexpPw =  function($el, val, callback){
+                            callback({
+                              value: val,
+                              valid: /^[a-zA-Z0-9_]{6,}$/.test(val) && /[a-z]/i.test(val) && /\d/.test(val),
+                              message: "密码不能小于6位且必须包含一个数字或字母"
+                            });                            
+                        } 
+                         
+                    </script>
+                    <p class="control-group"> 
                         <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-                        <i class="icon-briefcase"></i><input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO">
+                        <i class="icon-briefcase"></i><input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO" data-validation-required-message="请填写密码！" maxlength=12 data-validation-callback-callback="regexpPw">
+                        <span class="help-block"></span>
                     </p>
-                    <p> 
+                    <p class="control-group"> 
                         <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-                        <i class="icon-briefcase"></i><input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO">
+                        <i class="icon-briefcase"></i><input id="passwordsignup_confirm" name="passwordsignup_confirm" type="password" placeholder="eg. X8df!90EO" data-validation-match-match="passwordsignup" data-validation-match-message="密码不匹配">
+                        <span class="help-block"></span>
                     </p>
                     <p class="signin button"> 
     					<input type="submit" value="Sign up" class="btn btn-primary btn-large"> 
@@ -93,7 +106,9 @@
       "bg1.png", 
       "bg2.png"
     ], {duration: 3000, fade: 750});
-    $(".logo").tooltip()
+    $(".logo").tooltip();
+    $("input,select,textarea").not("[type=submit]").not("[name=passwordsignup_confirm]").jqBootstrapValidation()
+    $("[name=passwordsignup_confirm]").jqBootstrapValidation({validationHandlers:["blur"]})
 </script>
 
 

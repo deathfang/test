@@ -1,274 +1,40 @@
 @import url(http://fonts.googleapis.com/css?family=Prosto+One);
-h1,p,label,input,form{
-	margin: 0;padding: 0
-}
-.logo{
-	position: absolute;
-	top: -30%;
-	left: -30%;
-}
-a.hiddenanchor{
-	display: none;
-}
-/** The wrapper that will contain our two forms **/
-#wrapper{
-	left: 0;top: 0;bottom: 0;
-	right: 0px;
-	height: 480px;margin: auto;	
-	width: 500px;
-	position: absolute;
-}
-/**** Styling the form elements **/
-
-/**** general text styling ****/
-#wrapper a{
-	color: rgb(95, 155, 198);
-	text-decoration: underline;
-}
-
-#wrapper h1{
-	font-size: 48px;
-	color: rgb(70, 150, 223);
-	padding: 2px 0 10px 0;
-	font-weight: bold;
-	text-align: center;
-	padding-bottom: 30px;
-}
-/** For the moment only webkit supports the background-clip:text; */
-#wrapper h1{
-	
-	font-family: 'Prosto One', cursive;
-}
-#wrapper h1:after{
-	content: ' ';
-	display: block;
-	width: 100%;
-	height: 2px;
-	margin-top: 10px;
-	background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(147,184,189,0)), color-stop(0.2, rgba(132, 184, 231, 0.8)), color-stop(0.53, rgba(129, 165, 245, 1)), color-stop(0.79, rgba(214, 222, 241, 0.8)), to(rgba(147,184,189,0)));
-	 
-	background-image: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%, rgba(132, 184, 231, 0.8) 25%, rgba(129, 165, 245, 1) 53%, rgba(132, 184, 231, 0.8) 74%, rgba(147,184,189,0) 100%);
-	 background-image: -moz-linear-gradient(left, rgba(147,184,189,0) 0%, rgba(132, 184, 231, 0.8) 20%, rgba(129, 165, 245, 1) 53%, rgba(214, 222, 241, 0.8) 79%, rgba(147,184,189,0) 100%);
-	 background-image: -o-linear-gradient(left, rgba(147,184,189,0) 0%, rgba(132, 184, 231, 0.8) 20%, rgba(129, 165, 245, 1) 53%, rgba(214, 222, 241, 0.8) 79%, rgba(147,184,189,0) 100%);
-	 background-image: linear-gradient(left, rgba(147,184,189,0) 0%, rgba(132, 184, 231, 0.8) 20%, rgba(129, 165, 245, 1) 53%, rgba(214, 222, 241, 0.8) 79%, rgba(147,184,189,0) 100%); 
-}
-
-#wrapper p{
-	margin-bottom:15px;
-}
-#wrapper p:first-child{
-	margin: 0px;
-}
-#wrapper p i{
-	position: absolute;
-	margin: 19px 0 0 11px;
-	opacity: 0.7;
-}
-#wrapper label{
-	color: rgb(64, 92, 96);
-}
-
-/**** advanced input styling ****/
-/* placeholder */
-::-webkit-input-placeholder  { 
-	color: rgb(190, 188, 188); 
-	font-style: italic;
-}
-input:-moz-placeholder,
-textarea:-moz-placeholder{ 
-	color: rgb(190, 188, 188);
-	font-style: italic;
-} 
-input {
-  outline: none;
-}
-
-/* all the input except submit and checkbox */
-#wrapper input:not([type="checkbox"]){
-	width: 92%;
-	margin-top: 4px;
-	padding: 10px 5px 10px 32px;	
--webkit-box-sizing: content-box;
-	  -moz-box-sizing : content-box;
-	       box-sizing : content-box;	
-}
-
-
-/*styling both submit buttons */
-#wrapper p.button input{
-	width: 30%;
-	
-	padding: 8px 5px;
-	font-size: 24px;	
-
-	        box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
-	        0px 0px 0px 3px rgb(254, 254, 254),
-	        0px 5px 3px 3px rgb(210, 210, 210);
-	
-}
-
-#wrapper p.button input:active,
-#wrapper p.button input:focus{
-	position: relative;
-	top: 1px;
-	-webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
-	   -moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
-	        box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
-}
-p.login.button,
-p.signin.button{
-	text-align: right;
-	margin: 5px 0;
-}
-
-
-/* styling the checkbox "keep me logged in"*/
-.keeplogin{
-	margin-top: -5px;
-}
-.keeplogin input,
-.keeplogin label{
-	display: inline-block;
-	font-size: 12px;	
-}
-.keeplogin input#loginkeeping{
-	margin-right: 5px;
-}
-.keeplogin label{
-	width: 80%;
-}
-
-
-/*styling the links to change from one form to another */
-
-p.change_link{
-	position: absolute;
-	color: rgb(127, 124, 124);
-	left: 0px;
-	height: 20px;
-	width: 440px;
-	padding: 17px 30px 20px 30px;
-	font-size: 16px	;
-	text-align: right;
-	border-top: 1px solid rgb(219, 229, 232);
-	        border-radius: 0 0  5px 5px;
-	background: rgb(225, 234, 235);
-	background: -moz-repeating-linear-gradient(-45deg,    rgb(247, 247, 247) ,    rgb(247, 247, 247) 15px,    rgb(225, 239, 248) 15px,    rgb(221, 228, 255) 30px,    rgb(247, 247, 247) 30px   );
-	background: -webkit-repeating-linear-gradient(-45deg,    rgb(247, 247, 247) ,    rgb(247, 247, 247) 15px,    rgb(225, 239, 248) 15px,    rgb(221, 228, 255) 30px,    rgb(247, 247, 247) 30px   );
-	background: -o-repeating-linear-gradient(-45deg,    rgb(247, 247, 247) ,    rgb(247, 247, 247) 15px,    rgb(225, 239, 248) 15px,    rgb(221, 228, 255) 30px,    rgb(247, 247, 247) 30px   );
-	background: repeating-linear-gradient(-45deg,    rgb(247, 247, 247) ,    rgb(247, 247, 247) 15px,    rgb(225, 239, 248) 15px,    rgb(221, 228, 255) 30px,    rgb(247, 247, 247) 30px   );
-}
-#wrapper p.change_link a {
-	display: inline-block;
-	font-weight: bold;
-	background: rgb(247, 248, 241);
-	padding: 2px 6px;
-	color: rgb(71, 141, 230);
-	margin-left: 10px;
-	text-decoration: none;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	border: 1px solid rgb(203, 213, 214);
-	-webkit-transition: all 0.4s linear;
-	-moz-transition: all 0.4s  linear;
-	-o-transition: all 0.4s linear;
-	-ms-transition: all 0.4s  linear;
-	transition: all 0.4s  linear;
-}
-#wrapper p.change_link a:hover {
-	background: rgb(247, 247, 247);
-	border: 1px solid rgb(117, 172, 223);
-}
-#wrapper p.change_link a:active{
-	position: relative;
-	top: 1px;
-}
-/** Styling both forms **/
-#register, 
-#login{
-	position: absolute;
-	top: 0px;
-	width: 88%;	
-	padding: 18px 6% 60px 6%;
-	margin: 0 0 35px 0;
-	background: rgb(247, 247, 247);
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-		 border-radius: 5px;
-			
-}
-#register{	
-	z-index: 21;
-	opacity: 0;
-}
-#login{
-	z-index: 22;
-}
-#toregister:target ~ #wrapper #register,
-#tologin:target ~ #wrapper #login{
-	z-index: 22;
-	-webkit-animation-name: fadeInLeft;
-	-moz-animation-name: fadeInLeft;
-	-ms-animation-name: fadeInLeft;
-	-o-animation-name: fadeInLeft;
-	animation-name: fadeInLeft;
-	-webkit-animation-delay: .1s;
-	-moz-animation-delay: .1s;
-	-o-animation-delay: .1s;
-	-ms-animation-delay: .1s;
-	animation-delay: .1s;
-}
-#toregister:target ~ #wrapper #login,
-#tologin:target ~ #wrapper #register{
-	-webkit-animation-name: fadeOutLeftBig;
-	-moz-animation-name: fadeOutLeftBig;
-	-ms-animation-name: fadeOutLeftBig;
-	-o-animation-name: fadeOutLeftBig;
-	animation-name: fadeOutLeftBig;
-}
-
-/** the actual animation, credit where due : http://daneden.me/animate/ ***/
-.animate{
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: ease;
-	-webkit-animation-fill-mode: both;
-	
-	-moz-animation-duration: 1s;
-	-moz-animation-timing-function: ease;
-	-moz-animation-fill-mode: both;
-	
-	-o-animation-duration: 1s;
-	-o-animation-timing-function: ease;
-	-o-animation-fill-mode: both;
-	
-	-ms-animation-duration: 1s;
-	-ms-animation-timing-function: ease;
-	-ms-animation-fill-mode: both;
-	
-	animation-duration: 1s;
-	animation-timing-function: ease;
-	animation-fill-mode: both;
-}
-
-/** yerk some ugly IE fixes 'cause I know someone will ask "why does it look ugly in IE?", no matter how many warnings I will put in the article */
-
-.lt8 #wrapper input{
-	padding: 10px 5px 10px 32px;
-    width: 92%;
-}
-.lt8 #wrapper input[type=checkbox]{
-	width: 10px;
-	padding: 0;
-}
-.lt8 #wrapper h1{
-	color: #066A75;
-}
-.lt8 #register{	
-	display: none;
-}
-.lt8 p.change_link,
-.ie9 p.change_link{
-	position: absolute;
-	height: 90px;
-	background: transparent;
-}
+ h1,p,label,input,form{margin:0;padding:0}
+.logo{position:absolute;top:-30%;left:-30%}
+a.hiddenanchor{display:none}
+#wrapper{left:0;top:0;bottom:0;right:0;height:480px;margin:auto;width:500px;position:absolute}
+#wrapper a{color:#5F9BC6;text-decoration:underline}
+#wrapper h1{font-size:48px;color:#4696DF;padding:2px 0 10px 0;font-weight:bold;text-align:center;padding-bottom:30px}
+#wrapper h1{font-family:'Prosto One',cursive}
+#wrapper h1:after{content:' ';display:block;width:100%;height:2px;margin-top:10px;background-image:-webkit-gradient(linear,0 0,100% 0,from(rgba(147,184,189,0)),color-stop(0.2,rgba(132,184,231,.8)),color-stop(0.53,rgba(129,165,245,1)),color-stop(0.79,rgba(214,222,241,.8)),to(rgba(147,184,189,0)));background-image:-webkit-linear-gradient(left,rgba(147,184,189,0) 0,rgba(132,184,231,.8) 25%,rgba(129,165,245,1) 53%,rgba(132,184,231,.8) 74%,rgba(147,184,189,0) 100%);background-image:-moz-linear-gradient(left,rgba(147,184,189,0) 0,rgba(132,184,231,.8) 20%,rgba(129,165,245,1) 53%,rgba(214,222,241,.8) 79%,rgba(147,184,189,0) 100%);background-image:-o-linear-gradient(left,rgba(147,184,189,0) 0,rgba(132,184,231,.8) 20%,rgba(129,165,245,1) 53%,rgba(214,222,241,.8) 79%,rgba(147,184,189,0) 100%);background-image:linear-gradient(left,rgba(147,184,189,0) 0,rgba(132,184,231,.8) 20%,rgba(129,165,245,1) 53%,rgba(214,222,241,.8) 79%,rgba(147,184,189,0) 100%)}
+#wrapper p{margin-bottom:15px}
+#wrapper p:first-child{margin:0}
+#wrapper p i{position:absolute;margin:19px 0 0 11px;opacity:.7}
+#wrapper label{color:#405C60}
+::-webkit-input-placeholder{color:#BEBCBC;font-style:italic}
+input:-moz-placeholder,textarea:-moz-placeholder{color:#BEBCBC;font-style:italic}
+input{outline:none}
+#wrapper input:not([type="checkbox"]){width:92%;margin-top:4px;padding:10px 5px 10px 32px;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}
+#wrapper p.button input{width:30%;padding:8px 5px;font-size:24px;box-shadow:0 1px 6px 4px rgba(0,0,0,.07) inset,0px 0 0 3px #FEFEFE,0px 5px 3px 3px #D2D2D2}
+#wrapper p.button input:active,#wrapper p.button input:focus{position:relative;top:1px;-webkit-box-shadow:0 1px 6px 4px rgba(0,0,0,.2) inset;-moz-box-shadow:0 1px 6px 4px rgba(0,0,0,.2) inset;box-shadow:0 1px 6px 4px rgba(0,0,0,.2) inset}
+p.login.button,p.signin.button{text-align:right;margin:5px 0}
+.keeplogin{margin-top:-5px}
+.keeplogin input,.keeplogin label{display:inline-block;font-size:12px}
+.keeplogin input#loginkeeping{margin-right:5px}
+.keeplogin label{width:80%}
+p.change_link{position:absolute;color:#7F7C7C;left:0;height:20px;width:440px;padding:17px 30px 20px 30px;font-size:16px;text-align:right;border-top:1px solid #DBE5E8;border-radius:0 0 5px 5px;background:#E1EAEB;background:-moz-repeating-linear-gradient(-45deg,#F7F7F7,#F7F7F7 15px,#E1EFF8 15px,#DDE4FF 30px,#F7F7F7 30px);background:-webkit-repeating-linear-gradient(-45deg,#F7F7F7,#F7F7F7 15px,#E1EFF8 15px,#DDE4FF 30px,#F7F7F7 30px);background:-o-repeating-linear-gradient(-45deg,#F7F7F7,#F7F7F7 15px,#E1EFF8 15px,#DDE4FF 30px,#F7F7F7 30px);background:repeating-linear-gradient(-45deg,#F7F7F7,#F7F7F7 15px,#E1EFF8 15px,#DDE4FF 30px,#F7F7F7 30px)}
+#wrapper p.change_link a{display:inline-block;font-weight:bold;background:#F7F8F1;padding:2px 6px;color:#478DE6;margin-left:10px;text-decoration:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;border:1px solid #CBD5D6;-webkit-transition:all .4s linear;-moz-transition:all .4s linear;-o-transition:all .4s linear;-ms-transition:all .4s linear;transition:all .4s linear}
+#wrapper p.change_link a:hover{background:#F7F7F7;border:1px solid #75ACDF}
+#wrapper p.change_link a:active{position:relative;top:1px}
+#register,#login{position:absolute;top:0;width:88%;padding:18px 6% 60px 6%;margin:0 0 35px 0;background:#F7F7F7;box-shadow:0 0 8px rgba(0,0,0,.4);border-radius:5px}
+#register{z-index:21;opacity:0}
+#login{z-index:22}
+#toregister:target ~ #wrapper #register,#tologin:target ~ #wrapper #login{z-index:22;-webkit-animation-name:fadeInLeft;-moz-animation-name:fadeInLeft;-ms-animation-name:fadeInLeft;-o-animation-name:fadeInLeft;animation-name:fadeInLeft;-webkit-animation-delay:.1s;-moz-animation-delay:.1s;-o-animation-delay:.1s;-ms-animation-delay:.1s;animation-delay:.1s}
+#toregister:target ~ #wrapper #login,#tologin:target ~ #wrapper #register{-webkit-animation-name:fadeOutLeftBig;-moz-animation-name:fadeOutLeftBig;-ms-animation-name:fadeOutLeftBig;-o-animation-name:fadeOutLeftBig;animation-name:fadeOutLeftBig}
+.animate{-webkit-animation-duration:1s;-webkit-animation-timing-function:ease;-webkit-animation-fill-mode:both;-moz-animation-duration:1s;-moz-animation-timing-function:ease;-moz-animation-fill-mode:both;-o-animation-duration:1s;-o-animation-timing-function:ease;-o-animation-fill-mode:both;-ms-animation-duration:1s;-ms-animation-timing-function:ease;-ms-animation-fill-mode:both;animation-duration:1s;animation-timing-function:ease;animation-fill-mode:both}
+.lt8 #wrapper input{padding:10px 5px 10px 32px;width:92%}
+.lt8 #wrapper input[type=checkbox]{width:10px;padding:0}
+.lt8 #wrapper h1{color:#066A75}
+.lt8 #register{display:none}
+.lt8 p.change_link,.ie9 p.change_link{position:absolute;height:90px;background:transparent}
+#CssGaga{content:"20130312104212,213"}
