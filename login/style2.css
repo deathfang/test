@@ -2,7 +2,7 @@
  h1,p,label,input,form{margin:0;padding:0}
 .logo{position:absolute;top:-30%;left:-30%}
 a.hiddenanchor{display:none}
-#wrapper{left:0;top:0;bottom:0;right:0;height:480px;margin:auto;width:500px;position:absolute}
+#wrapper{left:0;top:0;bottom:0;right:0;height:440px;margin:auto;width:500px;position:absolute}
 #wrapper a{color:#5F9BC6;text-decoration:underline}
 #wrapper h1{font-size:48px;color:#4696DF;padding:2px 0 10px 0;font-weight:bold;text-align:center;padding-bottom:30px}
 #wrapper h1{font-family:'Prosto One',cursive}
@@ -17,16 +17,15 @@ input{outline:none}
 #wrapper input:not([type="checkbox"]){width:92%;margin-top:4px;padding:10px 5px 10px 32px;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}
 #wrapper p.button input{width:30%;padding:8px 5px;font-size:24px;box-shadow:0 1px 6px 4px rgba(0,0,0,.07) inset,0px 0 0 3px #FEFEFE,0px 5px 3px 3px #D2D2D2}
 #wrapper p.button input:active,#wrapper p.button input:focus{position:relative;top:1px;-webkit-box-shadow:0 1px 6px 4px rgba(0,0,0,.2) inset;-moz-box-shadow:0 1px 6px 4px rgba(0,0,0,.2) inset;box-shadow:0 1px 6px 4px rgba(0,0,0,.2) inset}
-p.login.button,p.signin.button{text-align:right;margin:5px 0}
+.submit.button{text-align:right;margin:5px 0}
 .keeplogin{margin-top:-5px}
 .keeplogin input,.keeplogin label{display:inline-block;font-size:12px}
 .keeplogin input#loginkeeping{margin-right:5px}
-.keeplogin label{width:80%}
 p.change_link{position:absolute;color:#7F7C7C;left:0;height:20px;width:440px;padding:17px 30px 20px 30px;font-size:16px;text-align:right;border-top:1px solid #DBE5E8;border-radius:0 0 5px 5px;background:#E1EAEB;background:-moz-repeating-linear-gradient(-45deg,#F7F7F7,#F7F7F7 15px,#E1EFF8 15px,#DDE4FF 30px,#F7F7F7 30px);background:-webkit-repeating-linear-gradient(-45deg,#F7F7F7,#F7F7F7 15px,#E1EFF8 15px,#DDE4FF 30px,#F7F7F7 30px);background:-o-repeating-linear-gradient(-45deg,#F7F7F7,#F7F7F7 15px,#E1EFF8 15px,#DDE4FF 30px,#F7F7F7 30px);background:repeating-linear-gradient(-45deg,#F7F7F7,#F7F7F7 15px,#E1EFF8 15px,#DDE4FF 30px,#F7F7F7 30px)}
 #wrapper p.change_link a{display:inline-block;font-weight:bold;background:#F7F8F1;padding:2px 6px;color:#478DE6;margin-left:10px;text-decoration:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;border:1px solid #CBD5D6;-webkit-transition:all .4s linear;-moz-transition:all .4s linear;-o-transition:all .4s linear;-ms-transition:all .4s linear;transition:all .4s linear}
 #wrapper p.change_link a:hover{background:#F7F7F7;border:1px solid #75ACDF}
 #wrapper p.change_link a:active{position:relative;top:1px}
-#register,#login{position:absolute;top:0;width:88%;padding:18px 6% 60px 6%;margin:0 0 35px 0;background:#F7F7F7;box-shadow:0 0 8px rgba(0,0,0,.4);border-radius:5px}
+#register,#login{position:absolute;top:0;width:88%;padding:18px 6% 60px 6%;background:#F7F7F7;box-shadow:0 0 8px rgba(0,0,0,.4);border-radius:5px}
 #register{z-index:21;opacity:0}
 #login{z-index:22}
 #toregister:target ~ #wrapper #register,#tologin:target ~ #wrapper #login{z-index:22;-webkit-animation-name:fadeInLeft;-moz-animation-name:fadeInLeft;-ms-animation-name:fadeInLeft;-o-animation-name:fadeInLeft;animation-name:fadeInLeft;-webkit-animation-delay:.1s;-moz-animation-delay:.1s;-o-animation-delay:.1s;-ms-animation-delay:.1s;animation-delay:.1s}

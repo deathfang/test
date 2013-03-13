@@ -19,4 +19,5 @@
 * [http://deathfang.github.com/test/bootstrap-daterangepicker/](http://deathfang.github.com/test/bootstrap-daterangepicker/)
 * [http://deathfang.github.com/test/impress.js/#/bored](http://deathfang.github.com/test/impress.js/#/bored)
 * [http://deathfang.github.com/test/login/](http://deathfang.github.com/test/login/)
+* [http://deathfang.github.com/test/login/style_zh.html](http://deathfang.github.com/test/login/style_zh.html)
 * [http://deathfang.github.com/test/yui_gallery/](http://deathfang.github.com/test/yui_gallery/)

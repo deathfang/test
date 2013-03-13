@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<html><head>
 		<title>Login and Registration Form with HTML5 and CSS3 Demo</title>
-       <meta charset="UTF-8">
+       <meta charset="utf-8">
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="description" content="Login and Registration Form with HTML5 and CSS3">
         <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class">
@@ -12,10 +11,6 @@
         <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css">
         <link rel="stylesheet" type="text/css" href="style2.css">
 		<link rel="stylesheet" type="text/css" href="animate-custom.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.min.js"></script>
-        <script src="jquery.backstretch.min.js"></script>     
-        <script src="jqBootstrapValidation.js"></script>     
 </head>
 <body>
 
@@ -24,30 +19,30 @@
         <a class="hiddenanchor" id="toregister"></a>
         <a class="hiddenanchor" id="tologin"></a>
         <div id="wrapper">
-            <a class="logo" data-toggle="tooltip" data-placement="right" title="î¶¶°É£¡ÈËî¡­¡­" href="/"><img src="logo.png" alt=""></a>
+            <a class="logo" data-toggle="tooltip" data-placement="right" title="é¡«æŠ–å§ï¼äººé¡â€¦â€¦" href="/"><img src="logo.png" alt=""></a>
             <div id="login" class="animate form">
                 <form action="" autocomplete="on" novalidate> 
-                    <h1>Login</h1> 
+                    <h1>Sign In</h1> 
                     <p class="control-group"> 
-                        <label for="username" class="uname" data-icon="u"> Your email or username </label>
-                        <i class="icon-user"></i><input id="username" name="username" required type="text" placeholder="myusername or mymail@mail.com" data-validation-required-message="ÇëÌîĞ´ÓÃ»§Ãû£¡">
+                        <label for="username"> Your email or username </label>
+                        <i class="icon-user"></i><input id="username" name="username" required type="text" placeholder="myusername or mymail@mail.com" data-validation-required-message="è¯·å¡«å†™ç”¨æˆ·åï¼">
                         <span class="help-block"></span>
                     </p>
                     <p class="control-group"> 
-                        <label for="password" class="youpasswd" data-icon="p"> Your password </label>
-                        <i class="icon-briefcase"></i><input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" data-validation-required-message="ÇëÌîĞ´ÃÜÂë£¡">
+                        <label for="password"> Your password </label>
+                        <i class="icon-briefcase"></i><input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" data-validation-required-message="è¯·å¡«å†™å¯†ç ï¼">
                         <span class="help-block"></span> 
                     </p>
                     <p class="keeplogin checkbox"> 
     					<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping"> 
     					<label for="loginkeeping">Remember</label>
     				</p>
-                    <p class="login button"> 
+                    <p class="submit button"> 
                         <input type="submit" value="Login" class="btn btn-primary btn-large"> 
     				</p>
                     <p class="change_link">
     					Not a member yet ?
-    					<a href="#toregister" class="to_register">Join us</a>
+    					<a href="#toregister">Join us</a>
     				</p>
                 </form>
             </div>
@@ -56,41 +51,32 @@
                 <form action="" autocomplete="on" novalidate> 
                     <h1>Sign Up</h1> 
                     <p class="control-group"> 
-                        <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-                        <i class="icon-briefcase"></i><input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" data-validation-required-message="ÇëÌîĞ´ÓÃ»§Ãû£¡">
+                        <label for="usernamesignup">Your username</label>
+                        <i class="icon-briefcase"></i><input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" data-validation-required-message="è¯·å¡«å†™ç”¨æˆ·åï¼">
                         <span class="help-block"></span>
                     </p>
                     <p class="control-group"> 
-                        <label for="emailsignup" class="youmail" data-icon="e"> Your email</label>
-                        <i class="icon-envelope"></i><input id="emailsignup" name="emailsignup" type="email" placeholder="mysupermail@mail.com" data-validation-email-message="Õâ²»ÊÇEmail" data-validation-required-message="ÇëÌîĞ´Email£¡"> 
+                        <label for="emailsignup"> Your email</label>
+                        <i class="icon-envelope"></i><input id="emailsignup" name="emailsignup" type="email" required placeholder="mysupermail@mail.com" data-validation-required-message="è¯·å¡«å†™Emailï¼"> 
                         <span class="help-block"></span>
                     </p>
-                    <script>
-                        var regexpPw =  function($el, val, callback){
-                            callback({
-                              value: val,
-                              valid: /^[a-zA-Z0-9_]{6,}$/.test(val) && /[a-z]/i.test(val) && /\d/.test(val),
-                              message: "ÃÜÂë²»ÄÜĞ¡ÓÚ6Î»ÇÒ±ØĞë°üº¬Ò»¸öÊı×Ö»ò×ÖÄ¸"
-                            });                            
-                        } 
-                         
-                    </script>
+                   
                     <p class="control-group"> 
-                        <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-                        <i class="icon-briefcase"></i><input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO" data-validation-required-message="ÇëÌîĞ´ÃÜÂë£¡" maxlength=12 data-validation-callback-callback="regexpPw">
+                        <label for="passwordsignup">Your password </label>
+                        <i class="icon-briefcase"></i><input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO" data-validation-required-message="è¯·å¡«å†™å¯†ç ï¼" maxlength=12 data-validation-callback-callback="regexpPw">
                         <span class="help-block"></span>
                     </p>
                     <p class="control-group"> 
-                        <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-                        <i class="icon-briefcase"></i><input id="passwordsignup_confirm" name="passwordsignup_confirm" type="password" placeholder="eg. X8df!90EO" required data-validation-required-message="ÇëÌîĞ´ÃÜÂë£¡" data-validation-match-match="passwordsignup" data-validation-match-message="ÃÜÂë²»Æ¥Åä">
+                        <label for="passwordsignup_confirm">Please confirm your password </label>
+                        <i class="icon-briefcase"></i><input id="passwordsignup_confirm" name="passwordsignup_confirm" type="password" placeholder="eg. X8df!90EO" required data-validation-required-message="è¯·å¡«å†™å¯†ç ï¼" data-validation-match-match="passwordsignup" data-validation-match-message="å¯†ç ä¸åŒ¹é…">
                         <span class="help-block"></span>
                     </p>
-                    <p class="signin button"> 
+                    <p class="submit button"> 
     					<input type="submit" value="Sign up" class="btn btn-primary btn-large"> 
     				</p>
                     <p class="change_link">  
     					Already a member ?
-    					<a href="#tologin" class="to_register"> Go and log in </a>
+    					<a href="#tologin"> Go and log in </a>
     				</p>
                 </form>
             </div>
@@ -98,19 +84,31 @@
         </div>
        
     </div>
-    
-		
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.min.js"></script>
+<script src="jquery.backstretch.min.js"></script>     
+<script src="jqBootstrapValidation.js"></script>    
 <script>
+    var regexpPw =  function($el, val, callback){
+        callback({
+          value: val,
+          valid: /^[a-zA-Z0-9_]{6,}$/.test(val) && /[a-z]/i.test(val) && /\d/.test(val),
+          message: "å¯†ç ä¸èƒ½å°äº6ä½ä¸”å¿…é¡»åŒ…å«ä¸€ä¸ªæ•°å­—æˆ–å­—æ¯"
+        });                            
+    } 
     $.backstretch([
       "bg1.png", 
       "bg2.png"
     ], {duration: 3000, fade: 750});
     $(".logo").tooltip();
-    $("input,select,textarea").not("[type=submit]").not("[name=passwordsignup_confirm]").jqBootstrapValidation()
+    $("input,select,textarea").not("[type=submit]").not("[name=passwordsignup_confirm]").jqBootstrapValidation({
+        validationMessage:{
+            email:"è¿™ä¸æ˜¯Email"    //ä»…ä¿®æ”¹emailï¼Œæ–¹ä¾¿jade 
+        }
+    })
     $("[name=passwordsignup_confirm]").jqBootstrapValidation({validationHandlers:["blur"]})
     $("#register").submit(function(){
-        $("[name=passwordsignup_confirm]").val() == "" &&  $("[name=passwordsignup_confirm]").parent(".control-group").addClass("error").find(".help-block").html('<ul role="alert"><li>ÇëÖØ¸´ÌîĞ´ÃÜÂë</li></ul>')
+        $("[name=passwordsignup_confirm]").val() == "" &&  $("[name=passwordsignup_confirm]").parent(".control-group").addClass("error").find(".help-block").html('<ul role="alert"><li>è¯·é‡å¤å¡«å†™å¯†ç </li></ul>')
     })
 </script>
 
