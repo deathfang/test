@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>microblog</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>microblog</title>
     <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
     <link rel="stylesheet" href="login.css">
   </head>
   <body>
     <div class="container"><a id="toregister" class="hiddenanchor"></a><a id="tologin" class="hiddenanchor"></a>
-      <div id="wrapper"><a data-toggle="tooltip" data-placement="right" title="顫抖吧！人類……" href="/" class="logo"><img src="logo.png" alt="logo"></a>
+      <div id="wrapper"><a data-toggle="tooltip" data-placement="right" title="顫抖吧！人類……" href="/" tabindex="-1" class="logo"><img src="logo.png" alt="logo"></a>
         <div id="login" class="animate form">
           <h1>Mini Blog</h1>
           <form action="" autocomplete="on" novalidate>
@@ -23,11 +23,11 @@
                     </p>
             <p class="keeplogin checkbox">
               <input id="loginkeeping" type="checkbox" name="loginkeeping" value="loginkeeping">
-              <label for="loginkeeping">记住我</label><a href="/passwordforget">忘记密码</a>
+              <label for="loginkeeping">记住我</label>
             </p>
                     <p class="submit button">
                       <input type="submit" value="登录" class="btn btn-primary">
-                    </p>
+                    </p><a href="/(forgot_password)" class="forgot_pw">忘记密码</a>
                     <p class="change_link">木有账号？<a href="#toregister">立即注册</a></p>
           </form>
         </div>
@@ -84,8 +84,15 @@
       $("#register").submit(function(){
           $("[name=passwordsignup_confirm]").val() == "" &&  $("[name=passwordsignup_confirm]").parent(".control-group").addClass("error").find(".help-block").html('<ul role="alert"><li>请重复填写密码</li></ul>')
       })
-      
-      
+      $("[href=#toregister]").click(function(){
+          $("#register input").attr("tabindex",1)
+      });
+      $("[href=#tologin]").click(function(){
+          $("#register input").removeAttr("tabindex")
+      });
+      $(function(){
+        location.hash == "#toregister" && $("#register input").attr("tabindex",1)
+      })
     </script>
   </body>
 </html>
