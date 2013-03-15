@@ -1,10 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Prosto+One);
 input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus {
     border-color: rgba(82, 168, 236, 0.8);
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }/*修复 bootstrap和插件验证冲突*/
-@import url(http://fonts.googleapis.com/css?family=Prosto+One);
+
 h1,p,label,input,form{margin:0;padding:0}
 .logo{position:absolute;top: -70%;left: -40%;}
 a.hiddenanchor{display:none}
@@ -15,7 +16,7 @@ a.hiddenanchor{display:none}
 #wrapper h1:after{content:' ';display:block;width:100%;height:2px;margin-top:10px;background-image:-webkit-gradient(linear,0 0,100% 0,from(rgba(147,184,189,0)),color-stop(0.2,rgba(132,184,231,.8)),color-stop(0.53,rgba(129,165,245,1)),color-stop(0.79,rgba(214,222,241,.8)),to(rgba(147,184,189,0)));background-image:-webkit-linear-gradient(left,rgba(147,184,189,0) 0,rgba(132,184,231,.8) 25%,rgba(129,165,245,1) 53%,rgba(132,184,231,.8) 74%,rgba(147,184,189,0) 100%);background-image:-moz-linear-gradient(left,rgba(147,184,189,0) 0,rgba(132,184,231,.8) 20%,rgba(129,165,245,1) 53%,rgba(214,222,241,.8) 79%,rgba(147,184,189,0) 100%);background-image:-o-linear-gradient(left,rgba(147,184,189,0) 0,rgba(132,184,231,.8) 20%,rgba(129,165,245,1) 53%,rgba(214,222,241,.8) 79%,rgba(147,184,189,0) 100%);background-image:linear-gradient(left,rgba(147,184,189,0) 0,rgba(132,184,231,.8) 20%,rgba(129,165,245,1) 53%,rgba(214,222,241,.8) 79%,rgba(147,184,189,0) 100%)}
 #wrapper p{margin-bottom:15px}
 #wrapper p:first-child{margin:0}
-#wrapper p i{position:absolute;margin:19px 0 0 11px;opacity:.7}
+#wrapper p i{position:absolute;margin:18px 0 0 11px;opacity:.7}
 #wrapper .control-group label{color:#405C60;position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);padding:0!important;border:0!important;height:1px!important;width:1px!important;overflow:hidden}
 ::-webkit-input-placeholder{color:#BEBCBC;}
 input:-moz-placeholder,textarea:-moz-placeholder{color:#BEBCBC;font-style:italic}
