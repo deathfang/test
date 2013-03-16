@@ -1,3 +1,4 @@
+## Reference
 *   [bootstrap-daterangepicker](https://github.com/dangrossman/bootstrap-daterangepicker)
     
 *   [impress.js](https://github.com/bartaz/impress.js)
@@ -14,10 +15,10 @@
     * [DataTables](http://www.datatables.net/media/blog/bootstrap_2)
     * [Unicorn Admin](http://wbpreview.com/previews/WB0F35928/tables.html)
 
-#### Preview Links
+## Preview Links
 * [http://deathfang.github.com/test/DataTables/](http://deathfang.github.com/test/DataTables/)
 * [http://deathfang.github.com/test/bootstrap-daterangepicker/](http://deathfang.github.com/test/bootstrap-daterangepicker/)
-* [http://deathfang.github.com/test/impress.js/#/bored](http://deathfang.github.com/test/impress.js/#/bored)
+* [http://deathfang.github.com/test/impress.js](http://deathfang.github.com/test/impress.js)
 * [http://deathfang.github.com/test/login/](http://deathfang.github.com/test/login/)
 * [http://deathfang.github.com/test/login/style_zh.html](http://deathfang.github.com/test/login/style_zh.html)
 * [http://deathfang.github.com/test/yui_gallery/](http://deathfang.github.com/test/yui_gallery/)

@@ -86,14 +86,22 @@
           $("[name=passwordsignup_confirm]").val() == "" &&  $("[name=passwordsignup_confirm]").parent(".control-group").addClass("error").find(".help-block").html('<ul role="alert"><li>请重复填写密码</li></ul>')
       })
       $("[href=#toregister]").click(function(){
+      $("#usernamesignup").focus();
           $("#register input").attr("tabindex",1)
       });
       $("[href=#tologin]").click(function(){
+          $("#username").focus();
           $("#register input").removeAttr("tabindex")
       });
       $(function(){
-        location.hash == "#toregister" && $("#register input").attr("tabindex",1)
-      })
+          if (location.hash == "#toregister") {
+              $("#usernamesignup").focus();
+              $("#register input").attr("tabindex",1);
+          }
+          else {
+              $("#username").focus();
+          }
+      });
     </script>
   </body>
 </html>
