@@ -85,27 +85,24 @@ Enjoy!
             var textarea = editor.find(" > textarea");
             var preview = $("#wmd-preview");
             var mask = $(".wmd-bar-mask");
-            var editorActive = function(){
+            var editorActive = function(e){
+                e.stopPropagation();
                 editor.addClass("active");
             };
             var editorUnActive = function(){editor.removeClass("active")};
-            var editorClick = function(e){
-                if (["TEXTAREA","STRONG","I","LI"].indexOf(e.target.tagName) === -1) {
-                    editorUnActive();
-                }
-            }
             var previewButton = $('<li class="wmd-button" id="wmd-preview-button" style="left:375px"><i class="icon icon-search"></i><strong>预览</strong></li>').appendTo($("#wmd-button-row"))
-                .click(function() {
+                .click(function(e) {
                     prettyPrint();
                     preview.toggleClass("hide");
                     textarea.toggleClass("hide");
                     mask.toggleClass("hide");
-                    editorActive();
+                    editorActive(e);
                 });
-            textarea.focus(function(){
-             editorActive();   
+            textarea.on("focus click",function(e){
+                editorActive(e);
+                console.log(100);
             }).blur(editorUnActive);
-            $(document).click(editorClick);
+            $(document).click(editorUnActive);
         }(jQuery)
         </script>
     </body>
