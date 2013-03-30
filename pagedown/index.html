@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            PageDown Demo Page
+        </title>
+        
+        <link rel="stylesheet" type="text/css" href="prettify.css" />
+        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="demo.css" />        
+    </head>
+
+    <body>
+        <div class="wmd-editor span6">
+            <div class="wmd-bar-mask hide"></div>
+            <div id="wmd-button-bar" class="wmd-header">
+            </div>
+            <textarea id="wmd-input" name="r_content" rows="8">
+### Hello there 
+How are you?
+
+I have bellow task for you :
+
+Select from this text...
+
+- Click the bold on THIS WORD and make THESE ONE italic
+- Link GOOGLE to google.com
+- Test to insert image (and try to tab after write the image description)
+Test Preview
+And ending here... Click "List"
+
+Enjoy!
+
+            </textarea>
+            <div id="wmd-preview" class="wmd-preview hide">
+            </div>
+        </div>
+        <br clear="both"> 
+        
+        <script type="text/javascript" src="prettify.js">
+        </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+        </script>
+        <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-transition.js"></script>
+        <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js"></script>
+        <script type="text/javascript" src="Markdown.Converter.js">
+        </script>
+        </script>
+        <script type="text/javascript" src="Markdown.Editor.js">
+        </script>
+        <script type="text/javascript">
+       !function($){
+            var converter1 = new Markdown.Converter();
+
+            var editor1 = new Markdown.Editor(converter1,"",{
+                    strings: {
+                        bold: "粗体 <strong> Ctrl+B",
+
+                        italic: "斜体 <em> Ctrl+I",
+
+                        link: "超链接 <a> Ctrl+L",
+                        linkdialog: "<strong>插入超链接</strong><p>http://example.com/ \"optional title\"</p>",
+
+                        quote: "块引用 <blockquote> Ctrl+Q",
+                        code: "代码 <pre><code> Ctrl+K",
+                        image: "图片 <img> Ctrl+G",
+                        imagedescription: "enter image description here",
+                        imagedialog: "<p><strong>插入图片</strong></p><p>http://example.com/images/diagram.jpg \"optional title\"</p>",
+
+                        olist: "有序列表 <ol> Ctrl+O",
+                        ulist: "无序列表 <ul> Ctrl+U",
+                        heading: "标题 <h1>/<h2> Ctrl+H",
+
+                        hr: "水平线 <hr> Ctrl+R",
+
+                        undo: "撤销 - Ctrl+Z",
+                        redo: "重做 - Ctrl+Y",
+                        redomac: "重做 - Ctrl+Shift+Z",                        
+                    }
+                });
+
+            editor1.run();
+            var editor = $(".wmd-editor");
+            var textarea = editor.find(" > textarea");
+            var preview = $("#wmd-preview");
+            var mask = $(".wmd-bar-mask");
+            var editorActive = function(){
+                editor.addClass("active");
+            };
+            var editorUnActive = function(){editor.removeClass("active")};
+            var editorClick = function(e){
+                if (["TEXTAREA","STRONG","I","LI"].indexOf(e.target.tagName) === -1) {
+                    editorUnActive();
+                }
+            }
+            var previewButton = $('<li class="wmd-button" id="wmd-preview-button" style="left:375px"><i class="icon icon-search"></i><strong>预览</strong></li>').appendTo($("#wmd-button-row"))
+                .click(function() {
+                    prettyPrint();
+                    preview.toggleClass("hide");
+                    textarea.toggleClass("hide");
+                    mask.toggleClass("hide");
+                    editorActive();
+                });
+            textarea.focus(function(){
+             editorActive();   
+            }).blur(editorUnActive);
+            $(document).click(editorClick);
+        }(jQuery)
+        </script>
+    </body>
+
+</html>

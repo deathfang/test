@@ -7,7 +7,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
 }/*修复 bootstrap和插件验证冲突*/
 
 h1,p,label,input,form{margin:0;padding:0}
-.logo{position:absolute;top: -70%;left: -40%;}
+.logo{position:absolute;top:15%;left:25%;}
 a.hiddenanchor{display:none}
 #wrapper{left:0;top:0;bottom:0;right:0;height: 300px;margin:auto;width: 400px;position:absolute}
 #wrapper a{color:#5F9BC6;text-decoration:underline}
