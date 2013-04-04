@@ -76,12 +76,12 @@
                         }
                      }, 
                      function(start, end) {
-                        $('#reportrange span').html(start.toString('yyyy-M-d') + end.toString('yyyy-M-d'));
+                        $('#reportrange span').html(start.toString('yyyy-MM-dd') + this.separator + end.toString('yyyy-MM-dd'));
                      }
                   );
 
                   //Set the initial state of the picker label
-                  $('#reportrange span').html(Date.today().add({ days: -29 }).toString('yyyy-M-d') + ' - ' + Date.today().toString('yyyy-M-d'));
+                  $('#reportrange span').html(Date.today().add({ days: -29 }).toString('yyyy-MM-dd') + ' - ' + Date.today().toString('yyyy-MM-dd'));
 
                });
                </script>
