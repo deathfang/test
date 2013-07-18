@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	
+</head>
+<body>
+	<div class="test1">
+		<button>test1</button>
+		<button class='test3'>test3</button>
+	</div>
+	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+	
+	<script src='/seajs/sea.js'></script>
+	<script>
+		seajs.use('js/test3',function(){
+			console.log('success test3');
+		})	
+		seajs.use('js/test1',function(){
+			console.log('success test1');
+		})
+	</script>
+</body>
+</html>
