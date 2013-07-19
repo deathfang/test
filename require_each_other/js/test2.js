@@ -14,6 +14,9 @@ define(function(require, exports, module) {
         },
         changeText: function() {
             this.text.changeButton()
+        },
+        addOne:function(){
+            this.$el.appendTo(jQuery('body'));
         }
     });
     module.exports = Div;

@@ -9,7 +9,8 @@ define(function(require, exports, module) {
         },
         addText: function() {
             var Div = require('./test2');
-            new Div(this).$el.appendTo(jQuery('body'));
+            // new Div(this).$el.appendTo(jQuery('body'));
+            new Div(this).addOne();
         },
         changeButton: function() {
             this.$('button').text('fuck');
