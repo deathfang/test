@@ -5,18 +5,16 @@ define(function(require, exports, module) {
             'click': 'changeText'
         },
         initialize: function(text) {
-           this.text = text
-            this.render()
+            // this.render()
         },
         render: function() {
-            this.$el.append(this.text.text);
+            this.trigger('append');
+            
             return this;
         },
         changeText: function() {
-            this.text.changeButton()
-        },
-        addOne:function(){
-            this.$el.appendTo(jQuery('body'));
+            // this.text.changeButton()
+            this.trigger('changeText')
         }
     });
     module.exports = Div;

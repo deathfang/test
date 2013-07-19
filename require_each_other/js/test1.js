@@ -9,8 +9,14 @@ define(function(require, exports, module) {
         },
         addText: function() {
             var Div = require('./test2');
-            // new Div(this).$el.appendTo(jQuery('body'));
-            new Div(this).addOne();
+            var div = new Div;
+            div.bind('append',function(){
+                div.$el.append(this.text).appendTo(jQuery('body'));
+            }.bind(this));
+            div.bind('changeText',function(){
+                this.changeButton()
+            }.bind(this));
+            div.render();
         },
         changeButton: function() {
             this.$('button').text('fuck');
