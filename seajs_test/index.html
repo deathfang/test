@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	
+</head>
+<body>
+	<div class="test1">
+		<button class='test1'>test1</button>
+		<button class='test3'>test3</button>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	
+	<script src='seajs/sea.js'></script>
+	<script>
+			
+		seajs.use('js/test1',function(t){
+			t.init()
+		})
+		seajs.use('js/test3',function(t){
+			t.init()
+		})		
+	</script>
+</body>
+</html>
