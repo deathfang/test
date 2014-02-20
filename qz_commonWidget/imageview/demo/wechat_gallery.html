@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=320,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="wechat_gallery.css">
+</head>
+<body>
+
+	<div class="gallery">
+		<ul class="multi">
+			<li style="background-image: url(../img/IMG_0130_thumb.jpg);" data-src="../img/IMG_0130.jpg"></li>
+			<li style="background-image: url(../img/IMG_0129_thumb.jpg);" data-src="../img/IMG_0129.jpg"></li>
+			<li style="background-image: url(../img/IMG_0126_thumb.jpg);" data-src="../img/IMG_0126.jpg"></li>
+			<li style="background-image: url(../img/3_thumb.jpg);" data-src="../img/3.jpg"></li>
+			<li style="background-image: url(../img/3_thumb.jpg);" data-src="../img/3.jpg"></li>
+			<li style="background-image: url(../img/3_thumb.jpg);" data-src="../img/3.jpg"></li>
+			<li style="background-image: url(../img/3_thumb.jpg);" data-src="../img/3.jpg"></li>
+			<li style="background-image: url(../img/3_thumb.jpg);" data-src="../img/3.jpg"></li>
+			<li style="background-image: url(../img/3_thumb.jpg);" data-src="../img/3.jpg"></li>
+			
+		</ul>
+	</div>
+	<div id="imageView"></div>
+	<script type="text/javascript" src="../../public/require.js"></script>
+	<script type="text/javascript">
+		requirejs.config({
+	        paths:{
+	            'zepto':'../../public/zepto.new',
+	            'handlebars.runtime':'../../bower_components/handlebars/handlebars.runtime.amd'
+	        },
+	        shim:{
+	            'zepto':{
+	                exports: 'Zepto'
+	            }
+	        }
+	    });	
+		require(['zepto','../src/init'],function($, imageview){
+		       var imgUrls = [];
+		       var $gallery = $('.gallery');
+		       var $imageView = $('#imageView');
+		       $gallery.find('li').each(function(i){
+		       		this.dataset.eq = i;
+					imgUrls.push(this.dataset.src)
+				});
+
+	       		$gallery.on('tap','li',function(){
+	       			imageview.init(imgUrls,this.dataset.eq)	
+	       		})	
+
+		       
+		      
+	    });	    	
+	</script>	
+</body>
+</html>
