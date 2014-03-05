@@ -32,18 +32,23 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Calendar.js" />
         <option value="$PROJECT_DIR$/build/out/fullcalendar.js" />
         <option value="$PROJECT_DIR$/lumbar_new.json" />
         <option value="$PROJECT_DIR$/src/basic/BasicEventRenderer.js" />
-        <option value="$PROJECT_DIR$/lumbar.json" />
-        <option value="$PROJECT_DIR$/demos/basic-views.html" />
-        <option value="$PROJECT_DIR$/build/out/fullcalendar.css" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/src/basic/BasicView.js" />
+        <option value="$PROJECT_DIR$/lumbar.json" />
+        <option value="$PROJECT_DIR$/demos/default.html" />
         <option value="$PROJECT_DIR$/src/common/View.js" />
+        <option value="$PROJECT_DIR$/src/fc-event.handlebars" />
+        <option value="$PROJECT_DIR$/build/out/fullcalendar.css" />
+        <option value="$PROJECT_DIR$/src/util.js" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/src/basic/basic.css" />
+        <option value="$PROJECT_DIR$/src/common/common.css" />
+        <option value="$PROJECT_DIR$/src/basic/BasicView.js" />
+        <option value="$PROJECT_DIR$/src/Calendar.js" />
         <option value="$PROJECT_DIR$/src/common/DayEventRenderer.js" />
+        <option value="$PROJECT_DIR$/demos/basic-views.html" />
       </list>
     </option>
   </component>
@@ -173,16 +178,14 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistory" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Project\test\fullcalendar\build\out" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -193,15 +196,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -234,7 +245,7 @@
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20148699" sideWeight="0.49918434" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24981412" sideWeight="0.5008157" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -262,30 +273,91 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+    <entry file="file://$PROJECT_DIR$/src/common/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="26" selection-start="2378" selection-end="2378" vertical-scroll-proportion="0.0" vertical-offset="1505" max-vertical-offset="6812">
+        <state line="156" column="21" selection-start="3681" selection-end="3681" vertical-scroll-proportion="0.0" vertical-offset="4056" max-vertical-offset="7202">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/agenda/AgendaView.js">
+    <entry file="file://$PROJECT_DIR$/src/basic/basic.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="23400">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1508">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fc-event.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="175" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="156">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basic/BasicDayView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="27" selection-start="380" selection-end="405" vertical-scroll-proportion="0.0" vertical-offset="598" max-vertical-offset="1196">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/DayEventRenderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="297" column="63" selection-start="10406" selection-end="10406" vertical-scroll-proportion="0.0" vertical-offset="7722" max-vertical-offset="19838">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demos/basic-views.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="28" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0" vertical-offset="539" max-vertical-offset="3796">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basic/BasicView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="218" column="0" selection-start="4837" selection-end="5001" vertical-scroll-proportion="0.0" vertical-offset="5668" max-vertical-offset="13936">
+          <folding>
+            <marker date="1394005938489" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1394005938489" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1394005938489" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1394005938489" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1394005938489" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1394005938489" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/DayEventRenderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="234" column="30" selection-start="8432" selection-end="8432" vertical-scroll-proportion="0.0" vertical-offset="6084" max-vertical-offset="19656">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="240" column="0" selection-start="5280" selection-end="5280" vertical-scroll-proportion="0.0" vertical-offset="6019" max-vertical-offset="7046">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demos/basic-views.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="8" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0" vertical-offset="364" max-vertical-offset="3198">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="26" selection-start="2378" selection-end="2378" vertical-scroll-proportion="0.0" vertical-offset="1505" max-vertical-offset="6812" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/agenda-views.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.1157324" vertical-offset="1170" max-vertical-offset="2626">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demos/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="380" selection-end="428" vertical-scroll-proportion="-0.28209764" vertical-offset="468" max-vertical-offset="2496">
           <folding />
         </state>
       </provider>
@@ -305,38 +377,14 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/CoordinateGrid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1352" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Calendar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="308" column="0" selection-start="7145" selection-end="7145" vertical-scroll-proportion="0.30650684" vertical-offset="7855" max-vertical-offset="14118" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lumbar_new.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="37" selection-start="501" selection-end="501" vertical-scroll-proportion="-1.6774193" vertical-offset="546" max-vertical-offset="1560" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/basic/BasicEventRenderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="172" selection-end="172" vertical-scroll-proportion="0.43835616" vertical-offset="82" max-vertical-offset="858">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/intro.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="179" selection-end="179" vertical-scroll-proportion="0.1780822" vertical-offset="0" max-vertical-offset="584">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/HorizontalPositionCache.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.110320285" vertical-offset="62" max-vertical-offset="858" />
+        <state line="8" column="13" selection-start="179" selection-end="179" vertical-scroll-proportion="0.1780822" vertical-offset="0" max-vertical-offset="584" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/HoverListener.js">
@@ -349,18 +397,6 @@
         <state line="17" column="4" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="2730" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="1289" selection-end="1289" vertical-scroll-proportion="-4.8886986" vertical-offset="4389" max-vertical-offset="7046" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/date_util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-16.05137" vertical-offset="9374" max-vertical-offset="9958">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EventManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="260" column="27" selection-start="6287" selection-end="6287" vertical-scroll-proportion="0.48458904" vertical-offset="6477" max-vertical-offset="10920" />
@@ -369,13 +405,6 @@
     <entry file="file://$PROJECT_DIR$/build/out/fullcalendar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2463" column="2" selection-start="54547" selection-end="54547" vertical-scroll-proportion="0.6118068" vertical-offset="63748" max-vertical-offset="106834">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/basic/MonthView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768">
           <folding />
         </state>
       </provider>
@@ -392,13 +421,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/out/fullcalendar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="411" column="14" selection-start="7926" selection-end="7926" vertical-scroll-proportion="0.4257603" vertical-offset="10448" max-vertical-offset="15470">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/SelectionManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="23" selection-start="494" selection-end="494" vertical-scroll-proportion="-2.405694" vertical-offset="1950" max-vertical-offset="2730" />
@@ -406,83 +428,188 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/watch">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="54" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lumbar.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="41" selection-start="661" selection-end="661" vertical-scroll-proportion="-22.64516" vertical-offset="0" max-vertical-offset="1664">
-          <folding />
-        </state>
+        <state line="0" column="54" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="36" selection-start="447" selection-end="447" vertical-scroll-proportion="0.7052441" vertical-offset="0" max-vertical-offset="728">
-          <folding />
-        </state>
+        <state line="15" column="36" selection-start="447" selection-end="447" vertical-scroll-proportion="0.7052441" vertical-offset="0" max-vertical-offset="728" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="123" selection-start="447" selection-end="447" vertical-scroll-proportion="0.40068492" vertical-offset="78" max-vertical-offset="1846">
+        <state line="10" column="123" selection-start="447" selection-end="447" vertical-scroll-proportion="0.40068492" vertical-offset="78" max-vertical-offset="1846" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/agenda/AgendaEventRenderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="572" column="0" selection-start="15689" selection-end="15689" vertical-scroll-proportion="5.337329" vertical-offset="11781" max-vertical-offset="23270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/CoordinateGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="23" selection-start="10" selection-end="24" vertical-scroll-proportion="-0.0890411" vertical-offset="78" max-vertical-offset="1352">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/HorizontalPositionCache.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="858" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lumbar.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="5" selection-start="160" selection-end="160" vertical-scroll-proportion="-7.548387" vertical-offset="0" max-vertical-offset="1664" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demos/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="4" selection-start="380" selection-end="382" vertical-scroll-proportion="36.064518" vertical-offset="1404" max-vertical-offset="2496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/out/fullcalendar.old.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="16" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="159302">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basic/BasicWeekView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="6" selection-start="937" selection-end="937" vertical-scroll-proportion="0.42123288" vertical-offset="950" max-vertical-offset="1534">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/View.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="525" column="23" selection-start="15488" selection-end="15488" vertical-scroll-proportion="0.510274" vertical-offset="13430" max-vertical-offset="14274">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/date_util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="10" selection-start="293" selection-end="299" vertical-scroll-proportion="0.21746576" vertical-offset="263" max-vertical-offset="9958">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/agenda/AgendaView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="573" column="8" selection-start="14199" selection-end="14199" vertical-scroll-proportion="0.21746576" vertical-offset="14771" max-vertical-offset="23400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/out/fullcalendar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="272" column="25" selection-start="5357" selection-end="5357" vertical-scroll-proportion="0.62842464" vertical-offset="6705" max-vertical-offset="15574">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="22" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.0" vertical-offset="1846" max-vertical-offset="7046">
+        <state line="86" column="42" selection-start="2290" selection-end="2290" vertical-scroll-proportion="0.59430605" vertical-offset="1902" max-vertical-offset="7046">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demos/basic-views.html">
+    <entry file="file://$PROJECT_DIR$/src/fc-event.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="7" selection-start="412" selection-end="412" vertical-scroll-proportion="-2.903226" vertical-offset="352" max-vertical-offset="3224">
+        <state line="0" column="175" selection-start="175" selection-end="175" vertical-scroll-proportion="0.048964217" vertical-offset="0" max-vertical-offset="531">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/out/event-tmpl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="19" selection-start="16" selection-end="2012" vertical-scroll-proportion="0.68835616" vertical-offset="352" max-vertical-offset="936">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="304" column="1" selection-start="6383" selection-end="6383" vertical-scroll-proportion="0.0" vertical-offset="7777" max-vertical-offset="8190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basic/MonthView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="16" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basic/BasicDayView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="21" selection-start="45" selection-end="57" vertical-scroll-proportion="0.07473309" vertical-offset="62" max-vertical-offset="1196">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basic/basic.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="15" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1508">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basic/BasicEventRenderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="27" selection-start="10" selection-end="28" vertical-scroll-proportion="0.04452055" vertical-offset="0" max-vertical-offset="858">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/basic/BasicView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="22" selection-start="600" selection-end="600" vertical-scroll-proportion="0.9332192" vertical-offset="53" max-vertical-offset="13676">
+        <state line="304" column="13" selection-start="6562" selection-end="6562" vertical-scroll-proportion="0.0" vertical-offset="7615" max-vertical-offset="14170">
           <folding>
-            <marker date="1393897452790" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1393897452790" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1393897452790" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1394005938489" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1394005938489" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1394005938489" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1394005938489" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1394005938489" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1394005938489" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/View.js">
+    <entry file="file://$PROJECT_DIR$/src/Calendar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="12" selection-start="611" selection-end="611" vertical-scroll-proportion="0.26198632" vertical-offset="471" max-vertical-offset="14274">
-          <folding />
+        <state line="400" column="19" selection-start="9186" selection-end="9186" vertical-scroll-proportion="0.0" vertical-offset="10154" max-vertical-offset="14144">
+          <folding>
+            <marker date="1394007157577" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/DayEventRenderer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="24" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0" vertical-offset="445" max-vertical-offset="15314">
-          <folding>
-            <element signature="n#!!block;n#renderDayEvents#0;n#!!block;n#DayEventRenderer#0" expanded="false" />
-            <element signature="n#!!block;n#renderTempDayEvent#0;n#!!block;n#DayEventRenderer#0" expanded="false" />
-            <element signature="n#!!block;n#_renderDayEvents#0;n#!!block;n#DayEventRenderer#0" expanded="false" />
-            <element signature="n#!!block;n#buildSegments#0;n#!!block;n#DayEventRenderer#0" expanded="false" />
-            <element signature="n#!!block;n#buildSegmentsForEvent#0;n#!!block;n#DayEventRenderer#0" expanded="false" />
-            <element signature="n#!!block;n#calculateHorizontals#0;n#!!block;n#DayEventRenderer#0" expanded="false" />
-            <element signature="n#!!block;n#buildHTML#0;n#!!block;n#DayEventRenderer#0" expanded="false" />
-            <element signature="n#!!block;n#resolveElements#0;n#!!block;n#DayEventRenderer#0" expanded="false" />
-          </folding>
+        <state line="396" column="30" selection-start="15072" selection-end="15072" vertical-scroll-proportion="0.0" vertical-offset="10397" max-vertical-offset="20800">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/agenda/AgendaEventRenderer.js">
+    <entry file="file://$PROJECT_DIR$/src/util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="572" column="0" selection-start="15689" selection-end="15689" vertical-scroll-proportion="5.337329" vertical-offset="11781" max-vertical-offset="23270">
+        <state line="207" column="8" selection-start="4458" selection-end="4458" vertical-scroll-proportion="0.21746576" vertical-offset="5255" max-vertical-offset="7046">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demos/basic-views.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="47" selection-start="2894" selection-end="2894" vertical-scroll-proportion="0.6708861" vertical-offset="2619" max-vertical-offset="4186">
           <folding />
         </state>
       </provider>

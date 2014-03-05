@@ -11,7 +11,7 @@ function View(element, calendar, viewName) {
 	t.opt = opt;
 	t.trigger = trigger;
 //	t.isEventDraggable = function(){};
-	t.isEventResizable = function(){};
+//	t.isEventResizable = function(){};
 	t.setEventData = setEventData;
 	t.clearEventData = clearEventData;
 	t.eventEnd = eventEnd;
@@ -77,18 +77,18 @@ function View(element, calendar, viewName) {
 //	}
 	
 	
-	function isEventResizable(event) { // but also need to make sure the seg.isEnd == true
-		var source = event.source || {};
-		return firstDefined(
-				event.durationEditable,
-				source.durationEditable,
-				opt('eventDurationEditable'),
-				event.editable,
-				source.editable,
-				opt('editable')
-			)
-			&& !opt('disableResizing'); // deprecated
-	}
+//	function isEventResizable(event) { // but also need to make sure the seg.isEnd == true
+//		var source = event.source || {};
+//		return firstDefined(
+//				event.durationEditable,
+//				source.durationEditable,
+//				opt('eventDurationEditable'),
+//				event.editable,
+//				source.editable,
+//				opt('editable')
+//			)
+//			&& !opt('disableResizing'); // deprecated
+//	}
 	
 	
 	
@@ -520,15 +520,15 @@ function View(element, calendar, viewName) {
 				// We need to compare "day offset" because "cell offsets" are often ambiguous and
 				// can translate to multiple days, and an edge case reveals itself when we the
 				// range's first cell is hidden (we don't want isStart to be true).
-				var isStart = cellOffsetToDayOffset(segmentCellOffsetFirst) == rangeDayOffsetStart;
-				var isEnd = cellOffsetToDayOffset(segmentCellOffsetLast) + 1 == rangeDayOffsetEnd; // +1 for comparing exclusively
+//				var isStart = cellOffsetToDayOffset(segmentCellOffsetFirst) == rangeDayOffsetStart;
+//				var isEnd = cellOffsetToDayOffset(segmentCellOffsetLast) + 1 == rangeDayOffsetEnd; // +1 for comparing exclusively
 
 				segments.push({
 					row: row,
 					leftCol: cols[0],
 					rightCol: cols[1],
-					isStart: isStart,
-					isEnd: isEnd
+//					isStart: isStart,
+//					isEnd: isEnd
 				});
 			}
 		}

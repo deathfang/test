@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 			preserveComments: 'some' // keep comments starting with /*!
 		},
 		expand: true,
-		src: 'build/out/fullcalendar.js', // only do it for fullcalendar.js
+		src: 'build/out/fullcalendar_little.js', // only do it for fullcalendar.js
 		ext: '.min.js'
 	}
 
@@ -84,7 +84,7 @@ module.exports = function(grunt) {
       // Start a live reload server on the default port 35729
       livereload: true
     },
-    files: 'src/**/*.js',
+    files: ['src/**/*.js','src/**/*.css'],
     tasks: 'dev'
   }
 

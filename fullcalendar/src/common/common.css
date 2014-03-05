@@ -154,6 +154,10 @@
 	color: #fff;               /* default TEXT color */
 	font-size: .85em;
 	cursor: default;
+    line-height: 16px;
+    height: 36px;
+    overflow: hidden;
+    word-wrap: break-word;
 	}
 
 a.fc-event {
@@ -263,5 +267,44 @@ table.fc-border-separate {
 .fc-border-separate tbody tr.fc-first th {
 	border-top-width: 0;
 	}
-	
-	
+
+
+#calendar .fc-content table{
+    border-spacing: 5px;
+    /*table-layout: fixed;*/
+}
+#calendar .fc-content td{
+    border: 2px solid #fff;
+    width: 126px;
+    height: 126px;
+}
+#calendar .fc-content td > div{
+    height: 100%;
+    background: #fff;
+    opacity: .75;
+}
+#calendar .fc-content td:hover{
+    border-color:#62b651;
+}
+#calendar .fc-content td:hover > div{
+
+    opacity: 1;
+}
+
+#calendar .fc-content td > div > a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+#calendar .fc-content td > div > a div{
+    padding-top: 100px;
+    text-align: center;
+}
+.cell-relative td > div{
+    position: relative;
+}
+.hasEvent .create-event{
+    display: none;
+}

@@ -213,6 +213,16 @@ function BasicView(element, calendar, viewName) {
 		var col;
 		var date;
 
+//    <a href="{{url}}" data-title="{{title}}" date-time="{{time}}" data-place="{{place}}" data-map-url="{{map-url}}"></a>
+
+
+//    {
+//      title:'大世界达拉斯的',
+//        url:'http://baidu.com',
+//      place:'中关村科技广场2号楼3层科技广场2号楼3层(地图)',
+//      time:'sadasd',
+//      'map-url':'dadad'
+//    }
 		html += "<tbody>";
 
 		for (row=0; row<rowCnt; row++) {
@@ -246,7 +256,7 @@ function BasicView(element, calendar, viewName) {
 	function buildCellHTML(date) {
 		var contentClass = tm + "-widget-content";
 		var month = t.start.getMonth();
-		var today = clearTime(new Date());
+		var today = clearTime(new Date);
 		var html = '';
 		var classNames = [
 			'fc-day',
@@ -273,7 +283,7 @@ function BasicView(element, calendar, viewName) {
 		html +=
 			"<td" +
 			" class='" + classNames.join(' ') + "'" +
-			" data-date='" + formatDate(date, 'yyyy-MM-dd') + "'" +
+			" data-date='" + +date + "'" +
 			">" +
 			"<div>";
 
@@ -284,9 +294,17 @@ function BasicView(element, calendar, viewName) {
 		html +=
 			"<div class='fc-day-content'>" +
 			"<div style='position:relative'>&nbsp;</div>" +
-			"</div>" +
-			"</div>" +
-			"</td>";
+			"</div>";
+
+
+
+    if (date.getMonth() == month) {
+      html +=
+        "<a class='create-event' href='http://www.huodongxing.com/myevent/create' target='_blank'>\
+          <div>发布活动</div>\
+        </a>\
+        </div></td>";
+    }
 
 		return html;
 	}
@@ -312,15 +330,15 @@ function BasicView(element, calendar, viewName) {
 			rowHeightLast = bodyHeight - rowHeight * (rowCnt-1);
 		}
 		
-		bodyFirstCells.each(function(i, _cell) {
-			if (i < rowCnt) {
-				cell = $(_cell);
-				cell.find('> div').css(
-					'min-height',
-					(i==rowCnt-1 ? rowHeightLast : rowHeight) - vsides(cell)
-				);
-			}
-		});
+//		bodyFirstCells.each(function(i, _cell) {
+//			if (i < rowCnt) {
+//				cell = $(_cell);
+//				cell.find('> div').css(
+//					'min-height',
+//					(i==rowCnt-1 ? rowHeightLast : rowHeight) - vsides(cell)
+//				);
+//			}
+//		});
 		
 	}
 	

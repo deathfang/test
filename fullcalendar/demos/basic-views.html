@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <link href='../build/out/fullcalendar.css' rel='stylesheet' />
 <link href='../build/out/fullcalendar.print.css' rel='stylesheet' media='print' />
 <script src='../lib/jquery/jquery.js'></script>
+<script src='../lib/handlebars.runtime.min.js'></script>
 <!--<script src='../lib/jquery-ui/ui/jquery-ui.js'></script>-->
 <script src='../build/out/fullcalendar.js'></script>
 <script>
@@ -22,10 +24,11 @@
 		text-align: center;
 		font-size: 14px;
 		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+        background-color: #93E4FF;
 		}
 
 	#calendar {
-		width: 900px;
+		width: 940px;
 		margin: 0 auto;
 		}
 
@@ -34,11 +37,37 @@
 <body>
 <div id='calendar'></div>
 <script>
+    if (!Array.prototype.some)
+    {
+        Array.prototype.some = function(fun /*, thisArg */)
+        {
+            'use strict';
+
+            if (this === void 0 || this === null)
+                throw new TypeError();
+
+            var t = Object(this);
+            var len = t.length >>> 0;
+            if (typeof fun !== 'function')
+                throw new TypeError();
+
+            var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
+            for (var i = 0; i < len; i++)
+            {
+                if (i in t && fun.call(thisArg, t[i], i, t))
+                    return true;
+            }
+
+            return false;
+        };
+    }
+</script>
+<script>
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();
-
+    var currentMonth;
     var calendar = $('#calendar').fullCalendar({
         header: {
             left: 'prev,next today',
@@ -52,25 +81,28 @@
                 start: new Date(y, m, 1)
             },
             {
+                title: 'fuck Day Event',
+                start: new Date(y, m, 1)
+            },
+            {
                 title: 'Long Event',
-                start: new Date(y, m, d-5),
-                end: new Date(y, m, d-2)
+                start: new Date(y, m, d)
             },
             {
                 id: 999,
                 title: 'Repeating Event',
-                start: new Date(y, m, d-3, 16, 0),
+                start: new Date(y, m, d-3),
                 allDay: false
             },
             {
                 id: 999,
                 title: 'Repeating Event',
-                start: new Date(y, m, d+4, 16, 0),
+                start: new Date(y, m, d+4),
                 allDay: false
             },
             {
                 title: 'Meeting',
-                start: new Date(y, m, d, 10, 30),
+                start: new Date(y, m, d),
                 allDay: false
             },
             {
@@ -80,9 +112,15 @@
 //					allDay: false
             },
             {
+                title: 'Lunchxxx',
+                start: new Date(1393839157502),
+//					end: new Date(y, m, d, 14, 0),
+//					allDay: false
+            },
+            {
                 title: 'Birthday Party',
-                start: new Date(y, m, d+1, 19, 0),
-                end: new Date(y, m, d+1, 22, 30),
+                start: new Date(y, m, d+1),
+//                end: new Date(y, m, d+1, 22, 30),
                 allDay: false
             },
             {
@@ -94,25 +132,24 @@
         ],
         eventMouseover:function(){
             console.log(1000)
-        },
-        select:function(){
-            console.log('event clicked')
         }
     });
-    var i = 0;
-    $('.fc-button-prev').on('click',function(){
-        $('#calendar').fullCalendar('addEventSource',
-            [
+    $('.fc-button-prev,.fc-button-next').on('click',function(){
+        currentMonth = $('#calendar').fullCalendar('getDate').getMonth() + 1;
+        !$('#calendar').fullCalendar('clientEvents').some(function(i){
+            return i.start.getMonth() + 1 == currentMonth
+        }) && $('#calendar').fullCalendar('addEventSource',
+                [
 
-                {
-                    title: 'fuck',
-                    start: new Date(y, m-1, d+i)
-                }
+                    {
+                        title: 'fuck',
+                        start: new Date(y, currentMonth -1 , d)
+                    }
 
-            ]
+                ]
         );
-        i++;
-    })
+    });
+
 </script>
 </body>
 </html>

@@ -183,6 +183,7 @@ function Calendar(element, options, eventSources) {
 
 
 	function renderView(inc) {
+
 		if (
 			!currentView.start || // never rendered before
 			inc || date < currentView.start || date >= currentView.end // or new date range

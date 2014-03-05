@@ -13,7 +13,7 @@ function DayEventRenderer() {
 	var opt = t.opt;
 	var trigger = t.trigger;
 //	var isEventDraggable = t.isEventDraggable;
-	var isEventResizable = t.isEventResizable;
+//	var isEventResizable = t.isEventResizable;
 	var eventEnd = t.eventEnd;
 	var reportEventElement = t.reportEventElement;
 	var eventElementHandlers = t.eventElementHandlers;
@@ -161,7 +161,7 @@ function DayEventRenderer() {
 
 		// Set the top coordinate on each element (requires segment.outerHeight)
 		setVerticals(segments, doRowHeights);
-
+    $('.fc-content table').addClass('cell-relative');
 		return segments;
 	}
 
@@ -229,76 +229,105 @@ function DayEventRenderer() {
 	// - `segment.event` (from `buildSegmentsForEvent`)
 	// - `segment.left` (from `calculateHorizontals`)
 	function buildHTMLForSegment(segment) {
-		var html = '';
+//		var html = '';
 		var isRTL = opt('isRTL');
 		var event = segment.event;
-		var url = event.url;
+//		var url = event.url || '';
 
 		// generate the list of CSS classNames
-		var classNames = [ 'fc-event', 'fc-event-hori' ];
+		var classNames = [ 'fc-event'];
 //		if (isEventDraggable(event)) {
 //			classNames.push('fc-event-draggable');
 //		}
-		if (segment.isStart) {
-			classNames.push('fc-event-start');
-		}
-		if (segment.isEnd) {
-			classNames.push('fc-event-end');
-		}
+//		if (segment.isStart) {
+//			classNames.push('fc-event-start');
+//		}
+//		if (segment.isEnd) {
+//			classNames.push('fc-event-end');
+//		}
 		// use the event's configured classNames
 		// guaranteed to be an array via `normalizeEvent`
-		classNames = classNames.concat(event.className);
+//		classNames = classNames.concat(event.className);
 		if (event.source) {
 			// use the event's source's classNames, if specified
-			classNames = classNames.concat(event.source.className || []);
+			className = classNames.concat(event.source.className || []);
 		}
-
 		// generate a semicolon delimited CSS string for any of the "skin" properties
 		// of the event object (`backgroundColor`, `borderColor` and such)
-		var skinCss = getSkinCss(event, opt);
+//		var skinCss = getSkinCss(event, opt);
 
-		if (url) {
-			html += "<a href='" + htmlEscape(url) + "'";
-		}else{
-			html += "<div";
-		}
-		html +=
-			" class='" + classNames.join(' ') + "'" +
-			" style=" +
-				"'" +
-				"position:absolute;" +
-				"left:" + segment.left + "px;" +
-				skinCss +
-				"'" +
-			">" +
-			"<div class='fc-event-inner'>";
-		if (!event.allDay && segment.isStart) {
-			html +=
-				"<span class='fc-event-time'>" +
-				htmlEscape(
-					formatDates(event.start, event.end, opt('timeFormat'))
-				) +
-				"</span>";
-		}
-		html +=
-			"<span class='fc-event-title'>" +
-			htmlEscape(event.title || '') +
-			"</span>" +
-			"</div>";
-		if (segment.isEnd && isEventResizable(event)) {
-			html +=
-				"<div class='ui-resizable-handle ui-resizable-" + (isRTL ? 'w' : 'e') + "'>" +
-				"&nbsp;&nbsp;&nbsp;" + // makes hit area a lot better for IE6/7
-				"</div>";
-		}
-		html += "</" + (url ? "a" : "div") + ">";
+//		if (url) {
+//			html += "<a href='" + htmlEscape(url) + "'";
+//		}else{
+//			html += "<div";
+//		}
+//		html +=
+//			" class='" + classNames.join(' ') + "'" +
+//			" style=" +
+//				"'" +
+//				"position:absolute;" +
+//				"left:" + segment.left + "px;" +
+////				skinCss +
+//				"'" +
+//
+//			">";
+//		if (!event.allDay && segment.isStart) {
+//			html +=
+//				"<span class='fc-event-time'>" +
+//				htmlEscape(
+//					formatDates(event.start, event.end, opt('timeFormat'))
+//				) +
+//				"</span>";
+//		}
+//		html +=
+//			"<span class='fc-event-title'>" +
+//			htmlEscape(event.title || '') +
+//			"</span>";
+//		if (segment.isEnd && isEventResizable(event)) {
+//			html +=
+//				"<div class='ui-resizable-handle ui-resizable-" + (isRTL ? 'w' : 'e') + "'>" +
+//				"&nbsp;&nbsp;&nbsp;" + // makes hit area a lot better for IE6/7
+//				"</div>";
+//		}
+//		html += "</" + (url ? "a" : "div") + ">";
 
 		// TODO:
 		// When these elements are initially rendered, they will be briefly visibile on the screen,
 		// even though their widths/heights are not set.
 		// SOLUTION: initially set them as visibility:hidden ?
+    $('[data-date=' + +segment.event.start + ']').addClass('hasEvent');
 
-		return html;
+    var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+    templates['fc-event'] = template({"compiler":[5,">= 2.0.0"],"main":function(depth0,helpers,partials,data) {
+      var helper, functionType="function", escapeExpression=this.escapeExpression;
+      return "<a href=\""
+        + escapeExpression(((helper = helpers.url || (depth0 && depth0.url)),(typeof helper === functionType ? helper.call(depth0, {"name":"url","hash":{},"data":data}) : helper)))
+        + "\" class=\""
+        + escapeExpression(((helper = helpers.className || (depth0 && depth0.className)),(typeof helper === functionType ? helper.call(depth0, {"name":"className","hash":{},"data":data}) : helper)))
+        + "\" data-title=\""
+        + escapeExpression(((helper = helpers.title || (depth0 && depth0.title)),(typeof helper === functionType ? helper.call(depth0, {"name":"title","hash":{},"data":data}) : helper)))
+        + "\" date-time=\""
+        + escapeExpression(((helper = helpers.time || (depth0 && depth0.time)),(typeof helper === functionType ? helper.call(depth0, {"name":"time","hash":{},"data":data}) : helper)))
+        + "\" data-place=\""
+        + escapeExpression(((helper = helpers.place || (depth0 && depth0.place)),(typeof helper === functionType ? helper.call(depth0, {"name":"place","hash":{},"data":data}) : helper)))
+        + "\" data-map-url=\""
+        + escapeExpression(((helper = helpers['map-url'] || (depth0 && depth0['map-url'])),(typeof helper === functionType ? helper.call(depth0, {"name":"map-url","hash":{},"data":data}) : helper)))
+        + "\" style=\"position: absolute;left:"
+        + escapeExpression(((helper = helpers.left || (depth0 && depth0.left)),(typeof helper === functionType ? helper.call(depth0, {"name":"left","hash":{},"data":data}) : helper)))
+        + "px\">"
+        + escapeExpression(((helper = helpers.title || (depth0 && depth0.title)),(typeof helper === functionType ? helper.call(depth0, {"name":"title","hash":{},"data":data}) : helper)))
+        + "</a>";
+    },"useData":true});
+
+    return Handlebars.templates['fc-event']({
+      title:event.title,
+      className:className,
+      left:segment.left,
+      url:event.url,
+      place:event.place,
+      time:event.time,
+      'map-url':event['map-url']
+    });
 	}
 
 
@@ -362,6 +391,7 @@ function DayEventRenderer() {
 
 		// Get each row's top, relative to the views's origin.
 		// Important to do this after setting each row's height.
+    $('.fc-content table').removeClass('cell-relative');
 		for (var i=0; i<rowContentElements.length; i++) {
 			rowContentTops.push(
 				rowContentElements[i].position().top
