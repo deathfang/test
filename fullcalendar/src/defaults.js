@@ -6,8 +6,8 @@ var defaults = {
 	aspectRatio: 1.35,
 	header: {
 		left: 'title',
-		center: '',
-		right: 'today prev,next'
+		center: 'prev,next today',
+		right: ''
 	},
 	weekends: true,
 	weekNumbers: false,
@@ -77,22 +77,22 @@ var defaults = {
 };
 
 // right-to-left defaults
-var rtlDefaults = {
-	header: {
-		left: 'next,prev today',
-		center: '',
-		right: 'title'
-	},
-	buttonText: {
-		prev: "<span class='fc-text-arrow'>&rsaquo;</span>",
-		next: "<span class='fc-text-arrow'>&lsaquo;</span>",
-		prevYear: "<span class='fc-text-arrow'>&raquo;</span>",
-		nextYear: "<span class='fc-text-arrow'>&laquo;</span>"
-	},
-	buttonIcons: {
-		prev: 'circle-triangle-e',
-		next: 'circle-triangle-w'
-	}
-};
+//var rtlDefaults = {
+//	header: {
+//		left: 'next,prev today',
+//		center: '',
+//		right: 'title'
+//	},
+//	buttonText: {
+//		prev: "<span class='fc-text-arrow'>&rsaquo;</span>",
+//		next: "<span class='fc-text-arrow'>&lsaquo;</span>",
+//		prevYear: "<span class='fc-text-arrow'>&raquo;</span>",
+//		nextYear: "<span class='fc-text-arrow'>&laquo;</span>"
+//	},
+//	buttonIcons: {
+//		prev: 'circle-triangle-e',
+//		next: 'circle-triangle-w'
+//	}
+//};
 
 

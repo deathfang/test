@@ -45,13 +45,13 @@ function Header(calendar, options) {
 		var buttonStr = options.header[position];
 		if (buttonStr) {
 			$.each(buttonStr.split(' '), function(i) {
-				if (i > 0) {
-					e.append("<span class='fc-header-space'/>");
-				}
+//				if (i > 0) {
+//					e.append("<span class='fc-header-space'/>");
+//				}
 				var prevButton;
 				$.each(this.split(','), function(j, buttonName) {
 					if (buttonName == 'title') {
-						e.append("<span class='fc-header-title'><h2>&nbsp;</h2></span>");
+						e.append("<span class='fc-header-title'></span>");
 						if (prevButton) {
 							prevButton.addClass(tm + '-corner-right');
 						}
@@ -85,28 +85,28 @@ function Header(calendar, options) {
 										buttonClick();
 									}
 								})
-								.mousedown(function() {
-									button
-										.not('.' + tm + '-state-active')
-										.not('.' + tm + '-state-disabled')
-										.addClass(tm + '-state-down');
-								})
-								.mouseup(function() {
-									button.removeClass(tm + '-state-down');
-								})
-								.hover(
-									function() {
-										button
-											.not('.' + tm + '-state-active')
-											.not('.' + tm + '-state-disabled')
-											.addClass(tm + '-state-hover');
-									},
-									function() {
-										button
-											.removeClass(tm + '-state-hover')
-											.removeClass(tm + '-state-down');
-									}
-								)
+//								.mousedown(function() {
+//									button
+//										.not('.' + tm + '-state-active')
+//										.not('.' + tm + '-state-disabled')
+//										.addClass(tm + '-state-down');
+//								})
+//								.mouseup(function() {
+//									button.removeClass(tm + '-state-down');
+//								})
+//								.hover(
+//									function() {
+//										button
+//											.not('.' + tm + '-state-active')
+//											.not('.' + tm + '-state-disabled')
+//											.addClass(tm + '-state-hover');
+//									},
+//									function() {
+//										button
+//											.removeClass(tm + '-state-hover')
+//											.removeClass(tm + '-state-down');
+//									}
+//								)
 								.appendTo(e);
 							disableTextSelection(button);
 							if (!prevButton) {
@@ -126,7 +126,7 @@ function Header(calendar, options) {
 	
 	
 	function updateTitle(html) {
-		element.find('h2')
+		element.find('.fc-header-title')
 			.html(html);
 	}
 	

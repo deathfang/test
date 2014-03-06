@@ -3,20 +3,14 @@
 <head>
 <meta charset="utf-8">
 <link href='../build/out/fullcalendar.css' rel='stylesheet' />
-<link href='../build/out/fullcalendar.print.css' rel='stylesheet' media='print' />
+<!--<link href="http://oss.huodongxing.com/Content/v2.0/dist/css/hdx.min.css" rel="stylesheet">-->
+<!--<link href='../src/style.css' rel='stylesheet' />-->
+<!--<link href='../build/out/fullcalendar.print.css' rel='stylesheet' media='print' />-->
 <script src='../lib/jquery/jquery.js'></script>
 <script src='../lib/handlebars.runtime.min.js'></script>
 <!--<script src='../lib/jquery-ui/ui/jquery-ui.js'></script>-->
 <script src='../build/out/fullcalendar.js'></script>
-<script>
 
-	$(document).ready(function() {
-	
-
-		
-	});
-
-</script>
 <style>
 
 	body {
@@ -69,11 +63,11 @@
     var y = date.getFullYear();
     var currentMonth;
     var calendar = $('#calendar').fullCalendar({
-        header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'month,basicWeek,basicDay'
-        },
+//        header: {
+//            left: 'prev,next today',
+//            center: 'title',
+//            right: ''
+//        },
 //			editable: true,
         events: [
             {
@@ -149,7 +143,9 @@
                 ]
         );
     });
-
+    $('.fc-event').mouseenter(function(e){
+        console.log($(this).offset().top)
+    })
 </script>
 </body>
 </html>

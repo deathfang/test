@@ -149,13 +149,13 @@
 	}
 	 
 .fc-event {
-	border: 1px solid #3a87ad; /* default BORDER color */
-	background-color: #3a87ad; /* default BACKGROUND color */
-	color: #fff;               /* default TEXT color */
-	font-size: .85em;
-	cursor: default;
+	/*border: 1px solid #3a87ad;*/
+	/*background-color: #3a87ad;*/
+	/*color: #fff;*/
+	/*font-size: .85em;*/
+	/*cursor: default;*/
     line-height: 16px;
-    height: 36px;
+    max-height: 36px;
     overflow: hidden;
     word-wrap: break-word;
 	}
@@ -282,29 +282,33 @@ table.fc-border-separate {
     height: 100%;
     background: #fff;
     opacity: .75;
+    position: relative;
 }
 #calendar .fc-content td:hover{
     border-color:#62b651;
 }
-#calendar .fc-content td:hover > div{
+#calendar .fc-content .fc-other-month:hover{
+    border-color:#fff ;
+}
+#calendar .fc-content .hasEvent:hover > div{
 
     opacity: 1;
 }
 
-#calendar .fc-content td > div > a{
+#calendar .fc-content td > div > .create-event{
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
 }
-#calendar .fc-content td > div > a div{
+#calendar .fc-content td > div > .create-event div{
     padding-top: 100px;
     text-align: center;
 }
-.cell-relative td > div{
-    position: relative;
-}
+/*.cell-relative td > div{*/
+    /*position: relative;*/
+/*}*/
 .hasEvent .create-event{
     display: none;
 }

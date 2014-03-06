@@ -48,8 +48,8 @@ function MonthView(element, calendar) {
 			rowCnt = 6;
 		}
 
-		t.title = formatDate(start, opt('titleFormat'));
-
+//		t.title = formatDate(start, opt('titleFormat'));
+    t.title = start.getFullYear() + '年' + start.getMonth() + '月';
 		t.start = start;
 		t.end = end;
 		t.visStart = visStart;

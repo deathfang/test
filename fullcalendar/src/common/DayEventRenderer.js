@@ -16,7 +16,7 @@ function DayEventRenderer() {
 //	var isEventResizable = t.isEventResizable;
 	var eventEnd = t.eventEnd;
 	var reportEventElement = t.reportEventElement;
-	var eventElementHandlers = t.eventElementHandlers;
+//	var eventElementHandlers = t.eventElementHandlers;
 	var showEvents = t.showEvents;
 	var hideEvents = t.hideEvents;
 //	var eventDrop = t.eventDrop;
@@ -142,26 +142,31 @@ function DayEventRenderer() {
 		// We need this for setting each element's desired outer width, because of the W3C box model.
 		// It's important we do this in a separate pass from acually setting the width on the DOM elements
 		// because alternating reading/writing dimensions causes reflow for every iteration.
-		segmentElementEach(segments, function(segment, element) {
-			segment.hsides = hsides(element, true); // include margins = `true`
-		});
+//		segmentElementEach(segments, function(segment, element) {
+//			segment.hsides = hsides(element, true); // include margins = `true`
+//		});
+//
+//		// Set the width of each element
+//		segmentElementEach(segments, function(segment, element) {
+//			element.width(
+//				Math.max(0, segment.outerWidth - segment.hsides)
+//			);
+//		});
+//
+//		// Grab each element's outerHeight (setVerticals uses this).
+//		// To get an accurate reading, it's important to have each element's width explicitly set already.
+//		segmentElementEach(segments, function(segment, element) {
+//			segment.outerHeight = element.outerHeight(true); // include margins = `true`
+//		});
 
-		// Set the width of each element
-		segmentElementEach(segments, function(segment, element) {
-			element.width(
-				Math.max(0, segment.outerWidth - segment.hsides)
-			);
-		});
 
-		// Grab each element's outerHeight (setVerticals uses this).
-		// To get an accurate reading, it's important to have each element's width explicitly set already.
-		segmentElementEach(segments, function(segment, element) {
-			segment.outerHeight = element.outerHeight(true); // include margins = `true`
-		});
+    segmentElementEach(segments, function(segment, element) {
+      $('[data-date=' + +segment.event.start + ']').addClass('hasEvent').find('> div').append(element);
+    })
 
 		// Set the top coordinate on each element (requires segment.outerHeight)
-		setVerticals(segments, doRowHeights);
-    $('.fc-content table').addClass('cell-relative');
+//		setVerticals(segments, doRowHeights);
+//    $('.fc-content table').addClass('cell-relative');
 		return segments;
 	}
 
@@ -295,15 +300,15 @@ function DayEventRenderer() {
 		// When these elements are initially rendered, they will be briefly visibile on the screen,
 		// even though their widths/heights are not set.
 		// SOLUTION: initially set them as visibility:hidden ?
-    $('[data-date=' + +segment.event.start + ']').addClass('hasEvent');
+//    $('[data-date=' + +segment.event.start + ']').addClass('hasEvent');
 
     var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
     templates['fc-event'] = template({"compiler":[5,">= 2.0.0"],"main":function(depth0,helpers,partials,data) {
       var helper, functionType="function", escapeExpression=this.escapeExpression;
-      return "<a href=\""
-        + escapeExpression(((helper = helpers.url || (depth0 && depth0.url)),(typeof helper === functionType ? helper.call(depth0, {"name":"url","hash":{},"data":data}) : helper)))
-        + "\" class=\""
+      return "<div class=\""
         + escapeExpression(((helper = helpers.className || (depth0 && depth0.className)),(typeof helper === functionType ? helper.call(depth0, {"name":"className","hash":{},"data":data}) : helper)))
+        + "\" >\r\n    <a href=\""
+        + escapeExpression(((helper = helpers.url || (depth0 && depth0.url)),(typeof helper === functionType ? helper.call(depth0, {"name":"url","hash":{},"data":data}) : helper)))
         + "\" data-title=\""
         + escapeExpression(((helper = helpers.title || (depth0 && depth0.title)),(typeof helper === functionType ? helper.call(depth0, {"name":"title","hash":{},"data":data}) : helper)))
         + "\" date-time=\""
@@ -312,17 +317,14 @@ function DayEventRenderer() {
         + escapeExpression(((helper = helpers.place || (depth0 && depth0.place)),(typeof helper === functionType ? helper.call(depth0, {"name":"place","hash":{},"data":data}) : helper)))
         + "\" data-map-url=\""
         + escapeExpression(((helper = helpers['map-url'] || (depth0 && depth0['map-url'])),(typeof helper === functionType ? helper.call(depth0, {"name":"map-url","hash":{},"data":data}) : helper)))
-        + "\" style=\"position: absolute;left:"
-        + escapeExpression(((helper = helpers.left || (depth0 && depth0.left)),(typeof helper === functionType ? helper.call(depth0, {"name":"left","hash":{},"data":data}) : helper)))
-        + "px\">"
+        + "\" target=\"_blank\">"
         + escapeExpression(((helper = helpers.title || (depth0 && depth0.title)),(typeof helper === functionType ? helper.call(depth0, {"name":"title","hash":{},"data":data}) : helper)))
-        + "</a>";
+        + "</a>\r\n</div>";
     },"useData":true});
 
     return Handlebars.templates['fc-event']({
       title:event.title,
       className:className,
-      left:segment.left,
       url:event.url,
       place:event.place,
       time:event.time,
@@ -377,36 +379,36 @@ function DayEventRenderer() {
 	// Sets the "top" CSS property for each element.
 	// If `doRowHeights` is `true`, also sets each row's first cell to an explicit height,
 	// so that if elements vertically overflow, the cell expands vertically to compensate.
-	function setVerticals(segments, doRowHeights) {
-		var rowContentHeights = calculateVerticals(segments); // also sets segment.top
-		var rowContentElements = getRowContentElements(); // returns 1 inner div per row
-		var rowContentTops = [];
-
-		// Set each row's height by setting height of first inner div
-		if (doRowHeights) {
-			for (var i=0; i<rowContentElements.length; i++) {
-				rowContentElements[i].height(rowContentHeights[i]);
-			}
-		}
-
-		// Get each row's top, relative to the views's origin.
-		// Important to do this after setting each row's height.
-    $('.fc-content table').removeClass('cell-relative');
-		for (var i=0; i<rowContentElements.length; i++) {
-			rowContentTops.push(
-				rowContentElements[i].position().top
-			);
-		}
-
-		// Set each segment element's CSS "top" property.
-		// Each segment object has a "top" property, which is relative to the row's top, but...
-		segmentElementEach(segments, function(segment, element) {
-			element.css(
-				'top',
-				rowContentTops[segment.row] + segment.top // ...now, relative to views's origin
-			);
-		});
-	}
+//	function setVerticals(segments, doRowHeights) {
+//		var rowContentHeights = calculateVerticals(segments); // also sets segment.top
+//		var rowContentElements = getRowContentElements(); // returns 1 inner div per row
+//		var rowContentTops = [];
+//
+//		// Set each row's height by setting height of first inner div
+//		if (doRowHeights) {
+//			for (var i=0; i<rowContentElements.length; i++) {
+//				rowContentElements[i].height(rowContentHeights[i]);
+//			}
+//		}
+//
+//		// Get each row's top, relative to the views's origin.
+//		// Important to do this after setting each row's height.
+//    $('.fc-content table').removeClass('cell-relative');
+//		for (var i=0; i<rowContentElements.length; i++) {
+//			rowContentTops.push(
+//				rowContentElements[i].position().top
+//			);
+//		}
+//
+//		// Set each segment element's CSS "top" property.
+//		// Each segment object has a "top" property, which is relative to the row's top, but...
+//		segmentElementEach(segments, function(segment, element) {
+//			element.css(
+//				'top',
+//				rowContentTops[segment.row] + segment.top // ...now, relative to views's origin
+//			);
+//		});
+//	}
 
 
 	// Calculate the "top" coordinate for each segment, relative to the "top" of the row.
@@ -543,16 +545,16 @@ function DayEventRenderer() {
 	// Return an array of jQuery objects for the placeholder content containers of each row.
 	// The content containers don't actually contain anything, but their dimensions should match
 	// the events that are overlaid on top.
-	function getRowContentElements() {
-		var i;
-		var rowCnt = getRowCnt();
-		var rowDivs = [];
-		for (i=0; i<rowCnt; i++) {
-			rowDivs[i] = allDayRow(i)
-				.find('div.fc-day-content > div');
-		}
-		return rowDivs;
-	}
+//	function getRowContentElements() {
+//		var i;
+//		var rowCnt = getRowCnt();
+//		var rowDivs = [];
+//		for (i=0; i<rowCnt; i++) {
+//			rowDivs[i] = allDayRow(i)
+//				.find('div.fc-day-content > div');
+//		}
+//		return rowDivs;
+//	}
 
 
 
@@ -592,7 +594,7 @@ function DayEventRenderer() {
 
 		// attach all other handlers.
 		// needs to be after, because resizableDayEvent might stopImmediatePropagation on click
-		eventElementHandlers(event, eventElement);
+//		eventElementHandlers(event, eventElement);
 	}
 
 

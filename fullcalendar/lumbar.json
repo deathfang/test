@@ -42,17 +42,17 @@
         "src/main.css",
         "src/common/common.css",
         "src/basic/basic.css",
-        "src/agenda/agenda.css"
+//        "src/agenda/agenda.css"
       ]
     },
     "fullcalendar.print": {
       "styles": [
-        "src/common/print.css"
+//        "src/common/print.css"
       ]
     },
     "gcal": {
       "scripts": [
-        "src/gcal/gcal.js"
+//        "src/gcal/gcal.js"
       ]
     }
   }

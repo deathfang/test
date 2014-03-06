@@ -17,7 +17,7 @@ function View(element, calendar, viewName) {
 	t.eventEnd = eventEnd;
 	t.reportEventElement = reportEventElement;
 	t.triggerEventDestroy = triggerEventDestroy;
-	t.eventElementHandlers = eventElementHandlers;
+//	t.eventElementHandlers = eventElementHandlers;
 	t.showEvents = showEvents;
 	t.hideEvents = hideEvents;
 //	t.eventDrop = eventDrop;
@@ -147,25 +147,25 @@ function View(element, calendar, viewName) {
 	
 	
 	// attaches eventClick, eventMouseover, eventMouseout
-	function eventElementHandlers(event, eventElement) {
-		eventElement
-			.click(function(ev) {
-				if (!eventElement.hasClass('ui-draggable-dragging') &&
-					!eventElement.hasClass('ui-resizable-resizing')) {
-						return trigger('eventClick', this, event, ev);
-					}
-			})
-			.hover(
-				function(ev) {
-					trigger('eventMouseover', this, event, ev);
-				},
-				function(ev) {
-					trigger('eventMouseout', this, event, ev);
-				}
-			);
-		// TODO: don't fire eventMouseover/eventMouseout *while* dragging is occuring (on subject element)
-		// TODO: same for resizing
-	}
+//	function eventElementHandlers(event, eventElement) {
+//		eventElement
+//			.click(function(ev) {
+//				if (!eventElement.hasClass('ui-draggable-dragging') &&
+//					!eventElement.hasClass('ui-resizable-resizing')) {
+//						return trigger('eventClick', this, event, ev);
+//					}
+//			})
+//			.hover(
+//				function(ev) {
+//					trigger('eventMouseover', this, event, ev);
+//				},
+//				function(ev) {
+//					trigger('eventMouseout', this, event, ev);
+//				}
+//			);
+//		// TODO: don't fire eventMouseover/eventMouseout *while* dragging is occuring (on subject element)
+//		// TODO: same for resizing
+//	}
 	
 	
 	function showEvents(event, exceptElement) {
@@ -526,7 +526,7 @@ function View(element, calendar, viewName) {
 				segments.push({
 					row: row,
 					leftCol: cols[0],
-					rightCol: cols[1],
+					rightCol: cols[1]
 //					isStart: isStart,
 //					isEnd: isEnd
 				});

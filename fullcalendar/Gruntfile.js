@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 			preserveComments: 'some' // keep comments starting with /*!
 		},
 		expand: true,
-		src: 'build/out/fullcalendar_little.js', // only do it for fullcalendar.js
+		src: 'build/out/fullcalendar_wait.js', // only do it for fullcalendar.js
 		ext: '.min.js'
 	}
 

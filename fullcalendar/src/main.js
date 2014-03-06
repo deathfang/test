@@ -41,7 +41,7 @@ $.fn.fullCalendar = function(options) {
 
 	options = $.extend(true, {},
 		defaults,
-		(options.isRTL || options.isRTL===undefined && defaults.isRTL) ? rtlDefaults : {},
+//		(options.isRTL || options.isRTL===undefined && defaults.isRTL) ? rtlDefaults : {},
 		options
 	);
 	

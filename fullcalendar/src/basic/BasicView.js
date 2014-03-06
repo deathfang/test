@@ -59,7 +59,7 @@ function BasicView(element, calendar, viewName) {
 	var bodyCells;
 	var bodyFirstCells;
 	var firstRowCellInners;
-	var firstRowCellContentInners;
+//	var firstRowCellContentInners;
 	var daySegmentContainer;
 	
 	var viewWidth;
@@ -142,7 +142,7 @@ function BasicView(element, calendar, viewName) {
 		bodyFirstCells = bodyRows.find('td:first-child');
 
 		firstRowCellInners = bodyRows.eq(0).find('.fc-day > div');
-		firstRowCellContentInners = bodyRows.eq(0).find('.fc-day-content > div');
+//		firstRowCellContentInners = bodyRows.eq(0).find('.fc-day-content > div');
 		
 		markFirstLast(head.add(head.find('tr'))); // marks first+last tr/th's
 		markFirstLast(bodyRows); // marks first+last td's
@@ -213,16 +213,6 @@ function BasicView(element, calendar, viewName) {
 		var col;
 		var date;
 
-//    <a href="{{url}}" data-title="{{title}}" date-time="{{time}}" data-place="{{place}}" data-map-url="{{map-url}}"></a>
-
-
-//    {
-//      title:'大世界达拉斯的',
-//        url:'http://baidu.com',
-//      place:'中关村科技广场2号楼3层科技广场2号楼3层(地图)',
-//      time:'sadasd',
-//      'map-url':'dadad'
-//    }
 		html += "<tbody>";
 
 		for (row=0; row<rowCnt; row++) {
@@ -291,10 +281,10 @@ function BasicView(element, calendar, viewName) {
 			html += "<div class='fc-day-number'>" + date.getDate() + "</div>";
 		}
 
-		html +=
-			"<div class='fc-day-content'>" +
-			"<div style='position:relative'>&nbsp;</div>" +
-			"</div>";
+//		html +=
+//			"<div class='fc-day-content'>" +
+//			"<div style='position:relative'>&nbsp;</div>" +
+//			"</div>";
 
 
 
@@ -507,7 +497,7 @@ function BasicView(element, calendar, viewName) {
 	});
 
 	colContentPositions = new HorizontalPositionCache(function(col) {
-		return firstRowCellContentInners.eq(col);
+//		return firstRowCellContentInners.eq(col);
 	});
 
 
