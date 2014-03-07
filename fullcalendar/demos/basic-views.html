@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link href='../build/out/fullcalendar.css' rel='stylesheet' />
-<!--<link href="http://oss.huodongxing.com/Content/v2.0/dist/css/hdx.min.css" rel="stylesheet">-->
-<!--<link href='../src/style.css' rel='stylesheet' />-->
+<!--<link href='../build/out/fullcalendar.css' rel='stylesheet' />-->
+<link href="http://oss.huodongxing.com/Content/v2.0/dist/css/hdx.min.css" rel="stylesheet">
+<link href='../src/style.css' rel='stylesheet' />
 <!--<link href='../build/out/fullcalendar.print.css' rel='stylesheet' media='print' />-->
 <script src='../lib/jquery/jquery.js'></script>
 <script src='../lib/handlebars.runtime.min.js'></script>
@@ -71,57 +71,100 @@
 //			editable: true,
         events: [
             {
-                title: 'All Day Event',
-                start: new Date(y, m, 1)
-            },
-            {
-                title: 'fuck Day Event',
-                start: new Date(y, m, 1)
-            },
-            {
-                title: 'Long Event',
-                start: new Date(y, m, d)
+                start: new Date(1393603200000),
+                events:[
+                    {
+                        title: 'All Day Event',
+
+                    },
+                    {
+                        title: 'fuck Day Event',
+                    }
+                ],
+                size:2
             },
             {
                 id: 999,
-                title: 'Repeating Event',
                 start: new Date(y, m, d-3),
+                events:[
+                    {
+                        title: 'Repeating Event',
+                    }
+                ],
                 allDay: false
             },
             {
-                id: 999,
-                title: 'Repeating Event',
                 start: new Date(y, m, d+4),
+                events:[
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                    }
+                ],
                 allDay: false
             },
             {
-                title: 'Meeting',
+
                 start: new Date(y, m, d),
+                events:[
+                    {
+                        id: 999,
+                        title: 'Meeting'
+                    },
+                    {
+                        title: 'Long Event'
+                    }
+                ],
                 allDay: false
             },
             {
-                title: 'Lunch',
+
                 start: new Date(1393839157502),
+                events:[
+                    {
+                        id: 999,
+                        title: 'Lunch',
+                    }
+                ],
 //					end: new Date(y, m, d, 14, 0),
 //					allDay: false
             },
             {
-                title: 'Lunchxxx',
+
                 start: new Date(1393839157502),
+                events:[
+                    {
+                        id: 999,
+                        title: 'Lunchxxx',
+                    }
+                ],
 //					end: new Date(y, m, d, 14, 0),
 //					allDay: false
             },
             {
-                title: 'Birthday Party',
+
                 start: new Date(y, m, d+1),
+                events:[
+                    {
+                        id: 999,
+                        title: 'Birthday Party',
+                    }
+                ],
 //                end: new Date(y, m, d+1, 22, 30),
                 allDay: false
             },
             {
-                title: 'Click for Google',
+
                 start: new Date(y, m, 28),
+                events:[
+                    {
+                        id: 999,
+                        title: 'Click for Google',
+                        url: 'http://google.com/'
+                    }
+                ],
                 end: new Date(y, m, 29),
-                url: 'http://google.com/'
+
             }
         ],
         eventMouseover:function(){
@@ -136,8 +179,13 @@
                 [
 
                     {
-                        title: 'fuck',
-                        start: new Date(y, currentMonth -1 , d)
+                        start: new Date(y, currentMonth -1 , d),
+                        events:[
+                            {
+                                title:'fuck'
+                            }
+                        ],
+                        size:1
                     }
 
                 ]

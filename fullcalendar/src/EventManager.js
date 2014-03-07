@@ -18,10 +18,10 @@ function EventManager(options, _sources) {
 	t.isFetchNeeded = isFetchNeeded;
 	t.fetchEvents = fetchEvents;
 	t.addEventSource = addEventSource;
-	t.removeEventSource = removeEventSource;
+//	t.removeEventSource = removeEventSource;
 	t.updateEvent = updateEvent;
 	t.renderEvent = renderEvent;
-	t.removeEvents = removeEvents;
+//	t.removeEvents = removeEvents;
 	t.clientEvents = clientEvents;
 	t.normalizeEvent = normalizeEvent;
 	
@@ -217,16 +217,16 @@ function EventManager(options, _sources) {
 	}
 	
 
-	function removeEventSource(source) {
-		sources = $.grep(sources, function(src) {
-			return !isSourcesEqual(src, source);
-		});
-		// remove all client events from that source
-		cache = $.grep(cache, function(e) {
-			return !isSourcesEqual(e.source, source);
-		});
-		reportEvents(cache);
-	}
+//	function removeEventSource(source) {
+//		sources = $.grep(sources, function(src) {
+//			return !isSourcesEqual(src, source);
+//		});
+//		// remove all client events from that source
+//		cache = $.grep(cache, function(e) {
+//			return !isSourcesEqual(e.source, source);
+//		});
+//		reportEvents(cache);
+//	}
 	
 	
 	
@@ -284,32 +284,32 @@ function EventManager(options, _sources) {
 	}
 	
 	
-	function removeEvents(filter) {
-		if (!filter) { // remove all
-			cache = [];
-			// clear all array sources
-			for (var i=0; i<sources.length; i++) {
-				if ($.isArray(sources[i].events)) {
-					sources[i].events = [];
-				}
-			}
-		}else{
-			if (!$.isFunction(filter)) { // an event ID
-				var id = filter + '';
-				filter = function(e) {
-					return e._id == id;
-				};
-			}
-			cache = $.grep(cache, filter, true);
-			// remove events from array sources
-			for (var i=0; i<sources.length; i++) {
-				if ($.isArray(sources[i].events)) {
-					sources[i].events = $.grep(sources[i].events, filter, true);
-				}
-			}
-		}
-		reportEvents(cache);
-	}
+//	function removeEvents(filter) {
+//		if (!filter) { // remove all
+//			cache = [];
+//			// clear all array sources
+//			for (var i=0; i<sources.length; i++) {
+//				if ($.isArray(sources[i].events)) {
+//					sources[i].events = [];
+//				}
+//			}
+//		}else{
+//			if (!$.isFunction(filter)) { // an event ID
+//				var id = filter + '';
+//				filter = function(e) {
+//					return e._id == id;
+//				};
+//			}
+//			cache = $.grep(cache, filter, true);
+//			// remove events from array sources
+//			for (var i=0; i<sources.length; i++) {
+//				if ($.isArray(sources[i].events)) {
+//					sources[i].events = $.grep(sources[i].events, filter, true);
+//				}
+//			}
+//		}
+//		reportEvents(cache);
+//	}
 	
 	
 	function clientEvents(filter) {

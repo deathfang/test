@@ -76,7 +76,7 @@ function BasicView(element, calendar, viewName) {
 	
 	var tm;
 	var colFormat;
-	var showWeekNumbers;
+//	var showWeekNumbers;
 	var weekNumberTitle;
 	var weekNumberFormat;
 	
@@ -108,7 +108,7 @@ function BasicView(element, calendar, viewName) {
 		colFormat = opt('columnFormat');
 
 		// week # options. (TODO: bad, logic also in other views)
-		showWeekNumbers = opt('weekNumbers');
+//		showWeekNumbers = opt('weekNumbers');
 		weekNumberTitle = opt('weekNumberTitle');
 		if (opt('weekNumberCalculation') != 'iso') {
 			weekNumberFormat = "w";
@@ -185,12 +185,12 @@ function BasicView(element, calendar, viewName) {
 
 		html += "<thead><tr>";
 
-		if (showWeekNumbers) {
-			html +=
-				"<th class='fc-week-number " + headerClass + "'>" +
-				htmlEscape(weekNumberTitle) +
-				"</th>";
-		}
+//		if (showWeekNumbers) {
+//			html +=
+//				"<th class='fc-week-number " + headerClass + "'>" +
+//				htmlEscape(weekNumberTitle) +
+//				"</th>";
+//		}
 
 		for (col=0; col<colCnt; col++) {
 			date = cellToDate(0, col);
@@ -219,18 +219,18 @@ function BasicView(element, calendar, viewName) {
 
 			html += "<tr class='fc-week'>";
 
-			if (showWeekNumbers) {
-				date = cellToDate(row, 0);
-				html +=
-					"<td class='fc-week-number " + contentClass + "'>" +
-					"<div>" +
-					htmlEscape(formatDate(date, weekNumberFormat)) +
-					"</div>" +
-					"</td>";
-			}
+//			if (showWeekNumbers) {
+//				date = cellToDate(row, 0);
+//				html +=
+//					"<td class='fc-week-number " + contentClass + "'>" +
+//					"<div>" +
+//					htmlEscape(formatDate(date, weekNumberFormat)) +
+//					"</div>" +
+//					"</td>";
+//			}
 
 			for (col=0; col<colCnt; col++) {
-				date = cellToDate(row, col);
+				date = cellToDate(row, col+1);
 				html += buildCellHTML(date);
 			}
 
@@ -288,14 +288,14 @@ function BasicView(element, calendar, viewName) {
 
 
 
-    if (date.getMonth() == month) {
+    if (date >= today) {
       html +=
         "<a class='create-event' href='http://www.huodongxing.com/myevent/create' target='_blank'>\
           <div>发布活动</div>\
-        </a>\
-        </div></td>";
+        </a>";
     }
 
+    html += "</div></td>"
 		return html;
 	}
 
@@ -339,9 +339,9 @@ function BasicView(element, calendar, viewName) {
 		colContentPositions.clear();
 
 		weekNumberWidth = 0;
-		if (showWeekNumbers) {
-			weekNumberWidth = head.find('th.fc-week-number').outerWidth();
-		}
+//		if (showWeekNumbers) {
+//			weekNumberWidth = head.find('th.fc-week-number').outerWidth();
+//		}
 
 		colWidth = Math.floor((viewWidth - weekNumberWidth) / colCnt);
 		setOuterWidth(headCells.slice(0, -1), colWidth);

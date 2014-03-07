@@ -8,7 +8,7 @@ function Calendar(element, options, eventSources) {
 	t.options = options;
 	t.render = render;
 	t.destroy = destroy;
-	t.refetchEvents = refetchEvents;
+//	t.refetchEvents = refetchEvents;
 	t.reportEvents = reportEvents;
 	t.reportEventChange = reportEventChange;
 	t.rerenderEvents = rerenderEvents;
@@ -296,10 +296,10 @@ function Calendar(element, options, eventSources) {
 	// TODO: going forward, most of this stuff should be directly handled by the view
 
 
-	function refetchEvents() { // can be called as an API method
-		clearEvents();
-		fetchAndRenderEvents();
-	}
+//	function refetchEvents() { // can be called as an API method
+//		clearEvents();
+//		fetchAndRenderEvents();
+//	}
 
 
 	function rerenderEvents(modifiedEventID) { // can be called as an API method
@@ -512,26 +512,26 @@ function Calendar(element, options, eventSources) {
 	/* External Dragging
 	------------------------------------------------------------------------*/
 	
-	if (options.droppable) {
-		$(document)
-			.bind('dragstart', function(ev, ui) {
-				var _e = ev.target;
-				var e = $(_e);
-				if (!e.parents('.fc').length) { // not already inside a calendar
-					var accept = options.dropAccept;
-					if ($.isFunction(accept) ? accept.call(_e, e) : e.is(accept)) {
-						_dragElement = _e;
-						currentView.dragStart(_dragElement, ev, ui);
-					}
-				}
-			})
-			.bind('dragstop', function(ev, ui) {
-				if (_dragElement) {
-					currentView.dragStop(_dragElement, ev, ui);
-					_dragElement = null;
-				}
-			});
-	}
+//	if (options.droppable) {
+//		$(document)
+//			.bind('dragstart', function(ev, ui) {
+//				var _e = ev.target;
+//				var e = $(_e);
+//				if (!e.parents('.fc').length) { // not already inside a calendar
+//					var accept = options.dropAccept;
+//					if ($.isFunction(accept) ? accept.call(_e, e) : e.is(accept)) {
+//						_dragElement = _e;
+//						currentView.dragStart(_dragElement, ev, ui);
+//					}
+//				}
+//			})
+//			.bind('dragstop', function(ev, ui) {
+//				if (_dragElement) {
+//					currentView.dragStop(_dragElement, ev, ui);
+//					_dragElement = null;
+//				}
+//			});
+//	}
 	
 
 }

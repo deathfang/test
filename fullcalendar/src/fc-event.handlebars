@@ -1,3 +1,8 @@
-<div class="{{className}}" >
-    <a href="{{url}}" data-title="{{title}}" date-time="{{time}}" data-place="{{place}}" data-map-url="{{map-url}}" target="_blank">{{title}}</a>
+<div>
+    {{#each events}}
+        <div class="fc-event" >
+            <a href="{{this.url}}" data-title="{{this.title}}" date-time="{{this.time}}" data-place="{{this.place}}" data-map-url="{{this.map-url}}" target="_blank">{{this.title}}</a>
+        </div>
+    {{/each}}
+    <div class="fc-event-counts">共{{size}}个活动<span class="icon-view"></span></div>
 </div>

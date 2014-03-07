@@ -1,12 +1,23 @@
 .fc-content table{
     border-spacing: 5px;
-    /*table-layout: fixed;*/
     border-collapse: separate;
 
 }
 .fc-header td{
     text-align: left;
 }
+.fc-header-left{
+    width: 100px;
+}
+
+.fc-day-header{
+    font-size: 20px;
+    font-family: 'Microsoft Yahei';
+    text-align: center;
+    color: #fff;
+    height: 29px;
+}
+
 .fc-content td{
     border: 2px solid #fff;
     width: 126px;
@@ -18,7 +29,11 @@
     padding-left: 12px;
     padding-top: 5px;
 }
-
+.fc-event-counts{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 .fc-content td a:hover{
     text-decoration: none;
 }
@@ -29,15 +44,20 @@
     opacity: .75;
     position: relative;
 }
-.fc-content td:hover{
+.fc-content .has-event:hover,.fc-content .fc-future:hover{
     border-color:#62b651;
 }
-.fc-content .fc-other-month:hover{
-    border-color:#fff ;
-}
-.fc-content .hasEvent:hover > div{
+
+.fc-content .has-event:hover > div{
 
     opacity: 1;
+}
+.fc-content .fc-state-highlight{
+    border-color:#62b651;
+}
+.fc-content .fc-state-highlight > div{
+    opacity: 1;
+
 }
 
 .fc-content td > div > .create-event{
@@ -55,9 +75,35 @@
     padding-top: 100px;
     text-align: center;
 }
-/*.cell-relative td > div{*/
-/*position: relative;*/
-/*}*/
-.hasEvent .create-event{
+
+.has-event .create-event{
     display: none;
+}
+
+thead .fc-mon{
+    background: #eb762d;
+}
+
+thead .fc-tue{
+    background: #e89d2c;
+}
+
+thead .fc-wed{
+    background: #d4d02c;
+}
+
+thead .fc-thu{
+    background: #7ac452;
+}
+
+thead .fc-fri{
+    background: #709b28;
+}
+
+thead .fc-sat{
+    background: #209ac8;
+}
+
+thead .fc-sun{
+    background: #9e50a4;
 }

@@ -269,46 +269,71 @@ table.fc-border-separate {
 	}
 
 
-#calendar .fc-content table{
+.fc-content table{
     border-spacing: 5px;
     /*table-layout: fixed;*/
+    border-collapse: separate;
+
 }
-#calendar .fc-content td{
+.fc-header td{
+    text-align: left;
+}
+.fc-header-left{
+    width: 100px;
+}
+.fc-content td{
     border: 2px solid #fff;
     width: 126px;
     height: 126px;
+    padding: 0;text-align: left;
 }
-#calendar .fc-content td > div{
+.fc-content .fc-day-number{
+    font-size: 18px;
+    padding-left: 12px;
+    padding-top: 5px;
+}
+.fc-event-counts{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.fc-content td a:hover{
+    text-decoration: none;
+}
+
+.fc-content td > div{
     height: 100%;
     background: #fff;
     opacity: .75;
     position: relative;
 }
-#calendar .fc-content td:hover{
+.fc-content .has-event:hover,.fc-content .fc-future:hover{
     border-color:#62b651;
 }
-#calendar .fc-content .fc-other-month:hover{
-    border-color:#fff ;
-}
-#calendar .fc-content .hasEvent:hover > div{
+
+.fc-content .has-event:hover > div{
 
     opacity: 1;
 }
 
-#calendar .fc-content td > div > .create-event{
+.fc-content td > div > .create-event{
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    color: #62b651;
+    font-size: 14px;
+    font-family: "Microsoft Yahei";
 }
-#calendar .fc-content td > div > .create-event div{
+
+.fc-content td > div > .create-event div{
     padding-top: 100px;
     text-align: center;
 }
 /*.cell-relative td > div{*/
-    /*position: relative;*/
+/*position: relative;*/
 /*}*/
-.hasEvent .create-event{
+.has-event .create-event{
     display: none;
 }
