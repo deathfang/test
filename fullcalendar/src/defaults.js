@@ -50,11 +50,11 @@ var defaults = {
 	dayNames: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
 	dayNamesShort: ['星期一','星期二','星期三','星期四','星期五','星期六','星期日'],
 	buttonText: {
-		prev: "<span class='fc-text-arrow'>&lsaquo;</span>",
-		next: "<span class='fc-text-arrow'>&rsaquo;</span>",
+		prev: "<span class='fc-text-arrow'></span>",
+		next: "<span class='fc-text-arrow'></span>",
 		prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
 		nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
-		today: 'today',
+		today: '查看今日',
 		month: 'month',
 		week: 'week',
 		day: 'day'

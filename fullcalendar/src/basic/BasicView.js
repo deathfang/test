@@ -11,7 +11,7 @@ function BasicView(element, calendar, viewName) {
 	// exports
 	t.renderBasic = renderBasic;
 	t.setHeight = setHeight;
-	t.setWidth = setWidth;
+//	t.setWidth = setWidth;
 	t.renderDayOverlay = renderDayOverlay;
 	t.defaultSelectionEnd = defaultSelectionEnd;
 	t.renderSelection = renderSelection;
@@ -168,7 +168,7 @@ function BasicView(element, calendar, viewName) {
 
 	function buildTableHTML() {
 		var html =
-			"<table class='fc-border-separate' style='width:100%' cellspacing='0'>" +
+			"<table>" +
 			buildHeadHTML() +
 			buildBodyHTML() +
 			"</table>";
@@ -275,7 +275,7 @@ function BasicView(element, calendar, viewName) {
 			" class='" + classNames.join(' ') + "'" +
 			" data-date='" + +date + "'" +
 			">" +
-			"<div>";
+			"<span class='td-bg'></span><div>";
 
 		if (showNumbers) {
 			html += "<div class='fc-day-number'>" + date.getDate() + "</div>";
@@ -294,8 +294,13 @@ function BasicView(element, calendar, viewName) {
           <div>发布活动</div>\
         </a>";
     }
+    if (date.getMonth() != month) {
+      html += "<span class='other-month-bg'></span></div></td>"
+    }else{
+      html += "</div></td>"
+    }
 
-    html += "</div></td>"
+
 		return html;
 	}
 
@@ -333,19 +338,19 @@ function BasicView(element, calendar, viewName) {
 	}
 	
 	
-	function setWidth(width) {
-		viewWidth = width;
-		colPositions.clear();
-		colContentPositions.clear();
-
-		weekNumberWidth = 0;
+//	function setWidth(width) {
+//		viewWidth = width;
+//		colPositions.clear();
+//		colContentPositions.clear();
+//
+//		weekNumberWidth = 0;
 //		if (showWeekNumbers) {
 //			weekNumberWidth = head.find('th.fc-week-number').outerWidth();
 //		}
-
-		colWidth = Math.floor((viewWidth - weekNumberWidth) / colCnt);
-		setOuterWidth(headCells.slice(0, -1), colWidth);
-	}
+//
+//		colWidth = Math.floor((viewWidth - weekNumberWidth) / colCnt);
+//		setOuterWidth(headCells.slice(0, -1), colWidth);
+//	}
 	
 	
 	

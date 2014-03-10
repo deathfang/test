@@ -51,20 +51,20 @@ function lazySegBind(container, segs, bindHandlers) {
 -----------------------------------------------------------------------------*/
 
 
-function setOuterWidth(element, width, includeMargins) {
-	for (var i=0, e; i<element.length; i++) {
-		e = $(element[i]);
-		e.width(Math.max(0, width - hsides(e, includeMargins)));
-	}
-}
+//function setOuterWidth(element, width, includeMargins) {
+//	for (var i=0, e; i<element.length; i++) {
+//		e = $(element[i]);
+//		e.width(Math.max(0, width - hsides(e, includeMargins)));
+//	}
+//}
 
 
-function setOuterHeight(element, height, includeMargins) {
-	for (var i=0, e; i<element.length; i++) {
-		e = $(element[i]);
-		e.height(Math.max(0, height - vsides(e, includeMargins)));
-	}
-}
+//function setOuterHeight(element, height, includeMargins) {
+//	for (var i=0, e; i<element.length; i++) {
+//		e = $(element[i]);
+//		e.height(Math.max(0, height - vsides(e, includeMargins)));
+//	}
+//}
 
 
 function hsides(element, includeMargins) {

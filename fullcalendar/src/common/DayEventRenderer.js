@@ -322,14 +322,17 @@ function DayEventRenderer() {
       var stack1, helper, functionType="function", escapeExpression=this.escapeExpression, buffer = "<div>\r\n    ";
       stack1 = helpers.each.call(depth0, (depth0 && depth0.events), {"name":"each","hash":{},"fn":this.program(1, data),"inverse":this.noop,"data":data});
       if(stack1 || stack1 === 0) { buffer += stack1; }
-      return buffer + "\r\n    <div class=\"fc-event-counts\">共"
+      return buffer + "\r\n    <a href=\""
+        + escapeExpression(((helper = helpers.start || (depth0 && depth0.start)),(typeof helper === functionType ? helper.call(depth0, {"name":"start","hash":{},"data":data}) : helper)))
+        + "\" class=\"fc-event-counts\">共"
         + escapeExpression(((helper = helpers.size || (depth0 && depth0.size)),(typeof helper === functionType ? helper.call(depth0, {"name":"size","hash":{},"data":data}) : helper)))
-        + "个活动<span class=\"icon-view\"></span></div>\r\n</div>";
+        + "个活动<span class=\"icon-view\"></span></a>\r\n</div>";
     },"useData":true});
 
     return Handlebars.templates['fc-event']({
       events:events.events,
-      size:events.size
+      size:events.size,
+      start:+events.start
     });
 	}
 

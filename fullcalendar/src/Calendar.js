@@ -260,8 +260,8 @@ function Calendar(element, options, eventSources) {
 		}
 
 		ignoreWindowResize++;
-		currentView.setHeight(suggestedViewHeight);
-		currentView.setWidth(content.width());
+//		currentView.setHeight(suggestedViewHeight);
+//		currentView.setWidth(content.width());
 		ignoreWindowResize--;
 
 		elementOuterWidth = element.outerWidth();

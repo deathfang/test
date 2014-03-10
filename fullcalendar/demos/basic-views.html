@@ -16,20 +16,21 @@
 	body {
 		margin-top: 40px;
 		text-align: center;
-		font-size: 14px;
+		font-size: 12px;
 		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
         background-color: #93E4FF;
 		}
 
 	#calendar {
-		width: 940px;
+		width: 960px;
 		margin: 0 auto;
 		}
 
 </style>
 </head>
 <body>
-<div id='calendar'></div>
+<div id='calendar' style="margin-top: 59px"></div>
+<div class="modal-event" style="position: absolute;width: 300px;height: 300px;background: #f00;"></div>
 <script>
     if (!Array.prototype.some)
     {
@@ -74,11 +75,11 @@
                 start: new Date(1393603200000),
                 events:[
                     {
-                        title: 'All Day Event',
+                        title: '啊大两岁的啊斯大林大三大四的啊大大是的'
 
                     },
                     {
-                        title: 'fuck Day Event',
+                        title: '啊哈哈是 鲁大师'
                     }
                 ],
                 size:2
@@ -88,7 +89,7 @@
                 start: new Date(y, m, d-3),
                 events:[
                     {
-                        title: 'Repeating Event',
+                        title: 'Repeating Event'
                     }
                 ],
                 allDay: false
@@ -98,7 +99,7 @@
                 events:[
                     {
                         id: 999,
-                        title: 'Repeating Event',
+                        title: 'Repeating Event'
                     }
                 ],
                 allDay: false
@@ -123,9 +124,9 @@
                 events:[
                     {
                         id: 999,
-                        title: 'Lunch',
+                        title: 'Lunch'
                     }
-                ],
+                ]
 //					end: new Date(y, m, d, 14, 0),
 //					allDay: false
             },
@@ -135,9 +136,9 @@
                 events:[
                     {
                         id: 999,
-                        title: 'Lunchxxx',
+                        title: 'Lunchxxx'
                     }
-                ],
+                ]
 //					end: new Date(y, m, d, 14, 0),
 //					allDay: false
             },
@@ -147,7 +148,7 @@
                 events:[
                     {
                         id: 999,
-                        title: 'Birthday Party',
+                        title: 'Birthday Party'
                     }
                 ],
 //                end: new Date(y, m, d+1, 22, 30),
@@ -163,7 +164,7 @@
                         url: 'http://google.com/'
                     }
                 ],
-                end: new Date(y, m, 29),
+                end: new Date(y, m, 29)
 
             }
         ],
@@ -191,9 +192,21 @@
                 ]
         );
     });
+    var docElem  = document.documentElement;
+    var box = { top: 0, bottom: 0 }
     $('.fc-event').mouseenter(function(e){
-        console.log($(this).offset().top)
-    })
+        var that  = this;
+        if ( typeof this.getBoundingClientRect !== undefined ) {
+            box = this.getBoundingClientRect();
+        }
+
+        $('.modal-event').show().css({
+            left:box.left  + window.pageXOffset - docElem.clientLeft,
+            top:box.bottom + window.pageYOffset - docElem.clientTop
+        })
+    }).mouseleave(function(){
+                $('.modal-event').hide()
+            })
 </script>
 </body>
 </html>

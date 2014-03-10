@@ -1,63 +1,122 @@
+body{
+    background-image: url(calendar_bg.jpg);
+    background-position: 50% 59px;
+    background-repeat: no-repeat;
+}
+
 .fc-content table{
     border-spacing: 5px;
     border-collapse: separate;
-
+    /*    *border-collapse: collapse;
+        *border-spacing: 0;*/
+    font-size: 14px;
 }
 .fc-header td{
     text-align: left;
+
+}
+.fc-header .fc-header-left{
+    text-align: center;
+}
+.fc-header-title{
+    font-size: 24px;;
+    height: 1px;
+    color: #1b1b1b;
+
 }
 .fc-header-left{
-    width: 100px;
+    width: 140px;
+    text-align: center;
 }
 
 .fc-day-header{
     font-size: 20px;
     font-family: 'Microsoft Yahei';
+    font-weight: normal;
     text-align: center;
     color: #fff;
-    height: 29px;
+    line-height: 29px;
 }
 
 .fc-content td{
     border: 2px solid #fff;
+    *border-width:1px;
     width: 126px;
     height: 126px;
     padding: 0;text-align: left;
+}
+
+.fc-content .fc-other-month{
+    color: #959595;
+}
+.fc-content .other-month-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(other_month_bg.png);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
 }
 .fc-content .fc-day-number{
     font-size: 18px;
     padding-left: 12px;
     padding-top: 5px;
+    line-height: 1;
 }
 .fc-event-counts{
     position: absolute;
     left: 0;
     bottom: 0;
+    right: 0;
+    background: #f4f7fa;
+    color: #a0a0a0;
+    font-size: 12px;
+    padding-left: 8px;
+    line-height: 20px;
 }
 .fc-content td a:hover{
     text-decoration: none;
 }
-
-.fc-content td > div{
-    height: 100%;
-    background: #fff;
-    opacity: .75;
+.fc-content td{
     position: relative;
 }
-.fc-content .has-event:hover,.fc-content .fc-future:hover{
+.fc-content td > div{
+    height: 100%;
+
+    position: relative;
+}
+.fc-content td .td-bg{
+    background-color: #fff;
+    opacity: .75;
+    filter: alpha(opacity=75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.fc-content .has-event:hover{
     border-color:#62b651;
 }
 
-.fc-content .has-event:hover > div{
+.fc-content .has-event:hover .fc-event-counts{
+    background: #62b651;
+    color: #fff;
+}
+
+.fc-content .has-event:hover .td-bg{
 
     opacity: 1;
+    filter: alpha(opacity=100);
 }
 .fc-content .fc-state-highlight{
     border-color:#62b651;
 }
-.fc-content .fc-state-highlight > div{
+.fc-content .fc-state-highlight .td-bg{
     opacity: 1;
-
+alpha(opacity=100)
 }
 
 .fc-content td > div > .create-event{
@@ -69,6 +128,9 @@
     color: #62b651;
     font-size: 14px;
     font-family: "Microsoft Yahei";
+    background-image: url(create_event_bg.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
 
 .fc-content td > div > .create-event div{
@@ -76,7 +138,7 @@
     text-align: center;
 }
 
-.has-event .create-event{
+.has-event .create-event,.has-event .other-month-bg {
     display: none;
 }
 
@@ -90,6 +152,7 @@ thead .fc-tue{
 
 thead .fc-wed{
     background: #d4d02c;
+    border-color: #d4d02c;
 }
 
 thead .fc-thu{
@@ -106,4 +169,84 @@ thead .fc-sat{
 
 thead .fc-sun{
     background: #9e50a4;
+}
+
+.fc-event{
+    padding-left: 14px;
+    max-height: 32px;
+    overflow: hidden;
+    line-height: 16px;
+    margin: 0 3px 3px;
+    padding-top: 3px;
+}
+.fc-event + .fc-event{
+    border-top: 1px solid #d2d2d2;
+}
+.fc-event:before{
+    content: '';
+    position: absolute;
+    margin-left: -10px;
+    margin-top: 6px;
+    background: #62b651;
+    width: 5px;
+    height: 5px;
+    border-radius:50%;
+
+}
+.fc-text-arrow{
+    display: inline-block;
+    vertical-align: middle;
+    *display: inline;
+    *zoom: 1;
+}
+.fc-button{
+    border-style:solid ;
+    border-color: #fff;
+    background: #e5f1e7;
+    line-height: 22px;
+    height: 22px;
+    text-align: center;
+    float: left;
+
+}
+
+.fc-button:hover{
+    background: #fff;
+}
+.fc-button-prev,.fc-button-next{
+    width: 32px;
+}
+.fc-button-today{
+border-width:1px;
+    border-color: #62b651;
+    border-radius: 16px;
+    margin-left: 20px;
+    background: #aec7d4;
+    width: 86px;
+    font-family: Microsoft Yahei;
+    font-size: 14px;
+}
+.fc-button-prev{
+    border-width: 1px 0 1px 1px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.fc-button-next{
+    border-width: 1px 1px 1px 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.icon-view{
+position: absolute;
+    top: 5px;
+    right: 8px;
+}
+
+.icon-view{width:15px;height:10px;background-image:url(img/slice/icon-view.png);}
+.fc-content .has-event:hover .fc-event-counts .icon-view{width:15px;height:10px;background-image:url(img/slice/icon-view_hover.png);}
+.fc-button-prev .fc-text-arrow{
+    width:7px;height:13px;background-image:url(img/slice/fc-button-prev.png);
+}
+.fc-button-next .fc-text-arrow{
+    width:7px;height:13px;background-image:url(img/slice/fc-button-next.png);
 }
