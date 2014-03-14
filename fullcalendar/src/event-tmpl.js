@@ -12,6 +12,10 @@ templates['fc-event'] = template({"1":function(depth0,helpers,partials,data) {
     + escapeExpression(((stack1 = (depth0 && depth0.place)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" data-map-url=\""
     + escapeExpression(((stack1 = (depth0 && depth0['map-url'])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" data-eq=\""
+    + escapeExpression(((stack1 = (data == null || data === false ? data : data.index)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" data-favorites=\""
+    + escapeExpression(((stack1 = (depth0 && depth0.favorites)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" target=\"_blank\">"
     + escapeExpression(((stack1 = (depth0 && depth0.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</a>\r\n        </div>\r\n    ";

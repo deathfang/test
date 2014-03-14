@@ -288,13 +288,13 @@ function BasicView(element, calendar, viewName) {
 
 
 
-    if (date >= today) {
+    if (date >= today && date.getMonth() == month) {
       html +=
         "<a class='create-event' href='http://www.huodongxing.com/myevent/create' target='_blank'>\
           <div>发布活动</div>\
         </a>";
     }
-    if (date.getMonth() != month) {
+    if (date.getMonth() != month || date < today) {
       html += "<span class='other-month-bg'></span></div></td>"
     }else{
       html += "</div></td>"

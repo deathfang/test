@@ -3,210 +3,46 @@
 <head>
 <meta charset="utf-8">
 <!--<link href='../build/out/fullcalendar.css' rel='stylesheet' />-->
-<link href="http://oss.huodongxing.com/Content/v2.0/dist/css/hdx.min.css" rel="stylesheet">
+<link href="../src/hdx.min.css" rel="stylesheet">
 <link href='../src/style.css' rel='stylesheet' />
 <!--<link href='../build/out/fullcalendar.print.css' rel='stylesheet' media='print' />-->
 <script src='../lib/jquery/jquery.js'></script>
 <script src='../lib/handlebars.runtime.min.js'></script>
 <!--<script src='../lib/jquery-ui/ui/jquery-ui.js'></script>-->
+<script src="../src/event-tmpl.js"></script>
 <script src='../build/out/fullcalendar.js'></script>
 
 <style>
 
 	body {
 		margin-top: 40px;
-		text-align: center;
 		font-size: 12px;
 		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
         background-color: #93E4FF;
 		}
 
-	#calendar {
-		width: 960px;
-		margin: 0 auto;
-		}
 
 </style>
 </head>
 <body>
 <div id='calendar' style="margin-top: 59px"></div>
-<div class="modal-event" style="position: absolute;width: 300px;height: 300px;background: #f00;"></div>
-<script>
-    if (!Array.prototype.some)
-    {
-        Array.prototype.some = function(fun /*, thisArg */)
-        {
-            'use strict';
-
-            if (this === void 0 || this === null)
-                throw new TypeError();
-
-            var t = Object(this);
-            var len = t.length >>> 0;
-            if (typeof fun !== 'function')
-                throw new TypeError();
-
-            var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
-            for (var i = 0; i < len; i++)
-            {
-                if (i in t && fun.call(thisArg, t[i], i, t))
-                    return true;
-            }
-
-            return false;
-        };
-    }
-</script>
-<script>
-    var date = new Date();
-    var d = date.getDate();
-    var m = date.getMonth();
-    var y = date.getFullYear();
-    var currentMonth;
-    var calendar = $('#calendar').fullCalendar({
-//        header: {
-//            left: 'prev,next today',
-//            center: 'title',
-//            right: ''
-//        },
-//			editable: true,
-        events: [
-            {
-                start: new Date(1393603200000),
-                events:[
-                    {
-                        title: '啊大两岁的啊斯大林大三大四的啊大大是的'
-
-                    },
-                    {
-                        title: '啊哈哈是 鲁大师'
-                    }
-                ],
-                size:2
-            },
-            {
-                id: 999,
-                start: new Date(y, m, d-3),
-                events:[
-                    {
-                        title: 'Repeating Event'
-                    }
-                ],
-                allDay: false
-            },
-            {
-                start: new Date(y, m, d+4),
-                events:[
-                    {
-                        id: 999,
-                        title: 'Repeating Event'
-                    }
-                ],
-                allDay: false
-            },
-            {
-
-                start: new Date(y, m, d),
-                events:[
-                    {
-                        id: 999,
-                        title: 'Meeting'
-                    },
-                    {
-                        title: 'Long Event'
-                    }
-                ],
-                allDay: false
-            },
-            {
-
-                start: new Date(1393839157502),
-                events:[
-                    {
-                        id: 999,
-                        title: 'Lunch'
-                    }
-                ]
-//					end: new Date(y, m, d, 14, 0),
-//					allDay: false
-            },
-            {
-
-                start: new Date(1393839157502),
-                events:[
-                    {
-                        id: 999,
-                        title: 'Lunchxxx'
-                    }
-                ]
-//					end: new Date(y, m, d, 14, 0),
-//					allDay: false
-            },
-            {
-
-                start: new Date(y, m, d+1),
-                events:[
-                    {
-                        id: 999,
-                        title: 'Birthday Party'
-                    }
-                ],
-//                end: new Date(y, m, d+1, 22, 30),
-                allDay: false
-            },
-            {
-
-                start: new Date(y, m, 28),
-                events:[
-                    {
-                        id: 999,
-                        title: 'Click for Google',
-                        url: 'http://google.com/'
-                    }
-                ],
-                end: new Date(y, m, 29)
-
-            }
-        ],
-        eventMouseover:function(){
-            console.log(1000)
-        }
-    });
-    $('.fc-button-prev,.fc-button-next').on('click',function(){
-        currentMonth = $('#calendar').fullCalendar('getDate').getMonth() + 1;
-        !$('#calendar').fullCalendar('clientEvents').some(function(i){
-            return i.start.getMonth() + 1 == currentMonth
-        }) && $('#calendar').fullCalendar('addEventSource',
-                [
-
-                    {
-                        start: new Date(y, currentMonth -1 , d),
-                        events:[
-                            {
-                                title:'fuck'
-                            }
-                        ],
-                        size:1
-                    }
-
-                ]
-        );
-    });
-    var docElem  = document.documentElement;
-    var box = { top: 0, bottom: 0 }
-    $('.fc-event').mouseenter(function(e){
-        var that  = this;
-        if ( typeof this.getBoundingClientRect !== undefined ) {
-            box = this.getBoundingClientRect();
-        }
-
-        $('.modal-event').show().css({
-            left:box.left  + window.pageXOffset - docElem.clientLeft,
-            top:box.bottom + window.pageYOffset - docElem.clientTop
-        })
-    }).mouseleave(function(){
-                $('.modal-event').hide()
-            })
-</script>
+<div class="modal-event">
+    <div class="modal-prev-btn modal-nav-btn">
+        <span class="modal-arrow-btn"></span>
+    </div>
+    <div class="modal-next-btn modal-nav-btn">
+        <span class="modal-arrow-btn"></span>
+    </div>
+    <div>
+        <h3><a href="">我想和这个世界谈谈读书分享会--韩寒30岁集锦,之北京签售会。</a></h3>
+        <div class="modal-body">
+            <p><span>时间：</span>2014/02/06（星期四）晚上20:00</p>
+            <p><span>地点：</span>中关村科技广场2号楼3层科技广场2号楼3
+                层<a href="">(地图)</a></p>
+        </div>
+        <a class="btn btn-lg btn-like" href=""><span class="icon-like-lg"></span>231人喜欢</a><a class="btn btn-primary btn-lg" href="">我要报名</a>
+    </div>
+</div>
+<script src="../src/event_calendar.js"></script>
 </body>
 </html>

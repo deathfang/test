@@ -1,0 +1,18 @@
+<div class="modal-event">
+    <div class="modal-prev-btn modal-nav-btn">
+        <span class="modal-arrow-btn"></span>
+    </div>
+    <div class="modal-next-btn modal-nav-btn">
+        <span class="modal-arrow-btn"></span>
+    </div>
+    {{#each events}}
+    <div data-eq="{{@index}}">
+        <h3><a href="">{{this.title}}</a></h3>
+        <div class="modal-body">
+            <p><span>时间：</span>{{this.time}}</p>
+            <p><span>地点：</span>{{this.place}}<a href="{{this.map-url}}">(地图)</a></p>
+        </div>
+        <a class="btn btn-lg btn-like" href=""><span class="icon-like-lg"></span>{{this.favorites}}人喜欢</a><a class="btn btn-primary btn-lg" href="">我要报名</a>
+    </div>
+    {{/each}}
+</div>
