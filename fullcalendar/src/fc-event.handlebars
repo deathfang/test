@@ -1,8 +1,8 @@
 <div>
     {{#each events}}
         <div class="fc-event" >
-            <a href="{{this.url}}" data-title="{{this.title}}" date-time="{{this.time}}" data-place="{{this.place}}" data-map-url="{{this.map-url}}" data-eq="{{@index}}" data-favorites="{{this.favorites}}" target="_blank">{{this.title}}</a>
+            <a href="{{this.url}}" data-title="{{this.title}}" data-time="{{this.time}}" data-place="{{this.place}}" data-mapurl="{{this.mapurl}}" data-eq="{{@index}}" data-favorites="{{this.favorites}}" target="_blank">{{this.title}}</a>
         </div>
     {{/each}}
-    <a href="{{start}}" class="fc-event-counts">共{{size}}个活动<span class="icon-view"></span></a>
+    <a href="/{{start}}" class="fc-event-counts">共{{size}}个活动<span class="icon-view"></span></a>
 </div>

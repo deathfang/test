@@ -305,7 +305,7 @@ function DayEventRenderer() {
     return Handlebars.templates['fc-event']({
       events:events.events,
       size:events.size,
-      start:+events.start
+      start:formatDate(events.start, 'yyyy-MM-dd')
     });
 	}
 

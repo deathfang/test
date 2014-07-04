@@ -38,18 +38,27 @@ var calendar = $('#calendar').fullCalendar({
 //			editable: true,
   events: [
     {
-      start: new Date(1393603200000),
+      //event._start = cloneDate(event.start = parseDate(event.start, ignoreTimezone));
+      start: '2014-03-02',
       events:[
         {
           title: '啊大两岁的啊斯大林大三大四的啊大大是的',
+          url:'http://baidu.com',
+          place:'啊拉拉',
+          time:'2014/02/06（星期四）晚上20:00',
+          'mapurl':'map.baidu.com',
           favorites:251
         },
         {
-          title: '啊哈哈是 鲁大师',
+          title: '天翼 jsjdj iausldjskvhdas啊是打扫打扫打扫大时代',
+          url:'http://baidu.com',
+          place:'啊拉拉啊拉拉啊拉拉啊拉拉啊拉拉啊拉拉啊拉拉啊拉拉啊拉拉啊拉拉',
+          time:'2014/02/06（星期四）晚上20:00 ',
+          'mapurl':'map.baidu.com',
           favorites:251
         }
       ],
-      size:2,
+      size:2
     },
     {
       id: 999,
@@ -57,6 +66,16 @@ var calendar = $('#calendar').fullCalendar({
       events:[
         {
           title: 'Repeating Event',
+          favorites:351
+        }
+      ],
+      allDay: false
+    },
+    {
+      start: new Date(y, m, d-3),
+      events:[
+        {
+          title: 'last Repeating Event',
           favorites:351
         }
       ],
@@ -91,30 +110,6 @@ var calendar = $('#calendar').fullCalendar({
     },
     {
 
-      start: new Date(1393839157502),
-      events:[
-        {
-          id: 999,
-          title: 'Lunch'
-        }
-      ]
-//					end: new Date(y, m, d, 14, 0),
-//					allDay: false
-    },
-    {
-
-      start: new Date(1393839157502),
-      events:[
-        {
-          id: 999,
-          title: 'Lunchxxx'
-        }
-      ]
-//					end: new Date(y, m, d, 14, 0),
-//					allDay: false
-    },
-    {
-
       start: new Date(y, m, d+1),
       events:[
         {
@@ -138,60 +133,118 @@ var calendar = $('#calendar').fullCalendar({
       end: new Date(y, m, 29)
 
     }
-  ],
-  eventMouseover:function(){
-    console.log(1000)
-  }
+  ]
 });
+
 $('.fc-button-prev,.fc-button-next').on('click',function(){
   currentMonth = $('#calendar').fullCalendar('getDate').getMonth() + 1;
-  !$('#calendar').fullCalendar('clientEvents').some(function(i){
+  if (!$('#calendar').fullCalendar('clientEvents').some(function(i){
     return i.start.getMonth() + 1 == currentMonth
-  }) && $('#calendar').fullCalendar('addEventSource',
-    [
+  })){
+    $('#calendar').fullCalendar('addEventSource',
+      [
 
-      {
-        start: new Date(y, currentMonth -1 , d),
-        events:[
-          {
-            title:'fuck'
-          }
-        ],
-        size:1
-      }
+        {
+          start: new Date(y, currentMonth -1 , d),
+          events:[
+            {
+              title: 'fuck U',
+              url:'http://baidu.com',
+              place:'fuck',
+              time:'2014/02/06（星期四）晚上20:00',
+              'mapurl':'map.baidu.com',
+              favorites:151
+            }
+          ],
+          size:1
+        }
+      ]
+    );
+    modalEventVisable();
+  }
 
-    ]
-  );
+
 });
 
 var eventsData = {};
 var docElem  = document.documentElement;
 var box = { top: 0, bottom: 0 }
-$('.fc-event').mouseenter(function(){
-  var that  = this;
-  var $td = $(that).parents('td');
-  var date = $td.data('date');
-  if (eventsData[date]) {
 
-  }else{
-    eventsData[date] = {
-      events:[
+function modalEventVisable(){
 
-      ]
-    }
-
-
-    if ( typeof that.getBoundingClientRect !== undefined ) {
-      box = that.getBoundingClientRect();
-    }
-    $('.modal-event').css({
-      left:box.left  + (window.pageXOffset || docElem.scrollLeft) - docElem.clientLeft,
-      top:box.bottom + (window.pageYOffset || docElem.scrollTop) - docElem.clientTop
-    }).show()
-  }
-}).mouseleave(function(){
+  $('.fc-event').mouseenter(function(){
     $('.modal-event').hide()
+    var that  = this;
+    var $td = $(that).parents('td');
+    var date = $td.data('date');
+    var eq = $(that).find('a').data('eq');
+    var modal;
+
+    if (eventsData[date]) {
+      modal = $('#modal-event-' + date).show();
+      if (eventsData[date].events.length > 1){
+        setTimeout(function(){
+          modal.slidesjs(eq+1);
+        },100)
+
+      }
+    }else{
+      eventsData[date] = {
+        date:date,
+        events:[],
+        eventAllUrl:''
+      }
+
+      var eventAllUrl = $td.find('.fc-event-counts').attr('href');
+
+      $td.find('.fc-event a').each(function(){
+        eventsData[date].events.push($(this).data());
+      })
+      eventsData[date].eventAllUrl = eventAllUrl;
+
+      modal = $(Handlebars.templates['modal-event'](eventsData[date])).appendTo('body');
+
+      if (eventsData[date].events.length > 1) {
+       modal.slidesjs({
+         width:320,
+         height:202,
+         navigation:{
+           active:false,
+           state:true
+         }
+       }).slidesjs(eq+1)
+       .find('.slidesjs-next').on('click.goto',function(){
+         if (!$(this).hasClass('enable')) {
+           location.href = eventAllUrl
+         }
+       })
+     }
+
+     if ( typeof that.getBoundingClientRect !== undefined ) {
+        box = that.getBoundingClientRect();
+      }
+      var offset;
+      var tdClass = $td.attr('class');
+      if (tdClass.indexOf('fc-first') !== -1) {
+        offset = 0
+      }else if(tdClass.indexOf('fc-last') !== -1){
+        offset = 320 - 120
+      }else{
+        offset = (320 - 120)/2
+      }
+      modal.css({
+        left:box.left  + (window.pageXOffset || docElem.scrollLeft) - docElem.clientLeft - offset,
+        top:box.bottom + (window.pageYOffset || docElem.scrollTop) - docElem.clientTop
+      })
+      .mouseleave(function(){
+        $(this).hide()
+      })
+    }
   })
 
+}
+
+modalEventVisable();
 
 
+$('.fc-button-today').click(modalEventVisable);
